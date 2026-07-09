@@ -5,7 +5,7 @@ Primary: Edge-TTS (free, unlimited, US neutral voice)
 Fallback 1: ElevenLabs free tier
 Fallback 2: Google Cloud TTS free tier
 """
-
+from gtts import gTTS
 import asyncio
 import os
 import requests
@@ -52,22 +52,12 @@ def _elevenlabs_provider(text: str, output_path: str) -> str:
 
 
 # ---------- Provider 3: Google Cloud TTS ----------
-def _google_tts_provider(text: str, output_path: str) -> str:
-    Config.validate(["GOOGLE_TTS_API_KEY"])
-    url = f"https://texttospeech.googleapis.com/v1/text:synthesize?key={Config.GOOGLE_TTS_API_KEY}"
-    payload = {
-        "input": {"text": text},
-        "voice": {"languageCode": "en-US", "name": "en-US-Neural2-D"},
-        "audioConfig": {"audioEncoding": "MP3"},
-    }
-    resp = requests.post(url, json=payload, timeout=60)
-    resp.raise_for_status()
-    import base64
-    audio_content = resp.json()["audioContent"]
-    with open(output_path, "wb") as f:
-        f.write(base64.b64decode(audio_content))
-    return output_path
 
+def generate_google_tts(text, output_file):
+    # Free gTTS - No API Key Needed
+    tts = gTTS(text=text, lang='en', slow=False)
+    tts.save(output_file)
+    return output_file
 
 def generate_voiceover(text: str, output_path: str) -> dict:
     """
@@ -76,7 +66,7 @@ def generate_voiceover(text: str, output_path: str) -> dict:
     providers = [
         ("edge_tts", lambda t, p: _edge_tts_provider(t, p)),
         ("elevenlabs", lambda t, p: _elevenlabs_provider(t, p)),
-        ("google_tts", lambda t, p: _google_tts_provider(t, p)),
+        ("google_tts", lambda t, p: generate_google_tts(t, p)),
     ]
     path, provider_used = run_with_fallback(providers, text, output_path)
     return {"path": path, "provider_used": provider_used}

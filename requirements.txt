@@ -6,6 +6,7 @@ praw==7.7.1
 requests==2.32.3
 google-generativeai==0.8.3
 groq
+gtts==2.5.1
 edge-tts==6.1.19
 openai-whisper
 Pillow==10.4.0
