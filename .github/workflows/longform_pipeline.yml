@@ -1,0 +1,67 @@
+name: Longform Pipeline
+
+on:
+  schedule:
+    # Runs 2x/week: Monday and Thursday at 10:00 UTC.
+    - cron: "0 10 * * 1,4"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run-longform-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # up to 6 hours — deep research + long video needs headroom
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore cached binary assets
+        uses: actions/cache@v4
+        with:
+          path: assets/
+          key: longform-assets-${{ github.run_id }}
+          restore-keys: |
+            longform-assets-
+
+      - name: Run Long-form pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YT_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python orchestrator_longform.py
+
+      - name: Commit and push state files (text only — never binaries)
+        run: |
+          git config user.name "yt-automation-bot"
+          git config user.email "actions@github.com"
+          git add pipeline_state/job_state.json pipeline_state/published_log.json
+          git diff --staged --quiet || git commit -m "chore: update longform pipeline state [skip ci]"
+          git push

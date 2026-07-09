@@ -1,0 +1,11 @@
+# Binary assets — cached by GitHub Actions, never committed
+assets/
+
+# Local environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
