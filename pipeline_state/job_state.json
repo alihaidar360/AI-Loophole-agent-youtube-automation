@@ -1,6 +1,27 @@
-name: Shorts Automation Pipeline
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch: 
+{
+  "shorts_20260709_204310_d4b609": {
+    "job_id": "shorts_20260709_204310_d4b609",
+    "video_type": "shorts",
+    "topic": "Synthesia",
+    "status": "paused_on_error",
+    "current_step": "script",
+    "completed_steps": [
+      "research",
+      "script"
+    ],
+    "failed_step": "voiceover",
+    "error_log": [
+      {
+        "step": "voiceover",
+        "error": "All providers failed. Details: {'edge_tts': \"403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&Sec-MS-GEC=0EDAAB1A500032B175571939086C00E57BF76733857804D744BC7F8877835A00&Sec-MS-GEC-Version=1-130.0.2849.68&ConnectionId=69ebda2d222745b5badb446b759c07a4'\", 'elevenlabs': '402 Client Error: Payment Required for url: https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM', 'google_tts': \"Missing required secrets: ['GOOGLE_TTS_API_KEY']. Set them in GitHub repo Settings -> Secrets and variables -> Actions.\"}",
+        "time": "2026-07-09T20:43:30.117522+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260709_204310_d4b609/research.json",
+      "script_path": "assets/shorts_20260709_204310_d4b609/script.json"
+    },
+    "created_at": "2026-07-09T20:43:10.900607+00:00",
+    "last_updated": "2026-07-09T20:43:30.117542+00:00"
+  }
+}
