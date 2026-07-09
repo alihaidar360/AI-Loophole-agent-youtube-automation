@@ -1,7 +1,7 @@
 """
 modules/scripting.py
 Stage 2: Script Writing Engine
-Long-form: Gemini 2.5 Pro (primary) -> Claude -> Groq (Llama 3.3 70B)
+Long-form: Gemini 1.5 Pro (primary) -> Claude -> Groq (Llama 3.3 70B)
 Shorts:    Groq (primary, fast)     -> Gemini      -> Cohere
 
 Every script generation also returns a "video_mood" tag so the visuals
@@ -45,7 +45,7 @@ def _gemini_longform(research: dict) -> dict:
     Config.validate(["GEMINI_API_KEY"])
     genai.configure(api_key=Config.GEMINI_API_KEY)
     model = genai.GenerativeModel(
-        "gemini-2.5-pro",
+        "gemini-1.5-pro",
         system_instruction=LONGFORM_SYSTEM_PROMPT,
         generation_config={"response_mime_type": "application/json"},
     )
@@ -86,7 +86,7 @@ def _gemini_shorts(research: dict) -> dict:
     Config.validate(["GEMINI_API_KEY"])
     genai.configure(api_key=Config.GEMINI_API_KEY)
     model = genai.GenerativeModel(
-        "gemini-2.5-flash",  # faster/cheaper model fits shorts better
+        "gemini-1.5-flash",  # faster/cheaper model fits shorts better
         system_instruction=SHORTS_SYSTEM_PROMPT,
         generation_config={"response_mime_type": "application/json"},
     )
@@ -96,7 +96,7 @@ def _gemini_shorts(research: dict) -> dict:
 
 def generate_longform_script(research: dict) -> dict:
     providers = [
-        ("gemini_2.5_pro", _gemini_longform),
+        ("gemini_1.5_pro", _gemini_longform),
         ("groq_llama3.3_70b", _groq_longform),
     ]
     script, provider_used = run_with_fallback(providers, research)
