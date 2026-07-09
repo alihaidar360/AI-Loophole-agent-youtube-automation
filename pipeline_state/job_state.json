@@ -12,7 +12,7 @@
     "error_log": [
       {
         "step": "script",
-        "error": "All providers failed. Details: {'groq_llama3.3_70b': \"Client.__init__() got an unexpected keyword argument 'proxies'\", 'gemini_2.5_flash': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.'}",
+        "error": "All providers failed. Details: {'groq_llama3.3_70b': \"Client.__init__() got an unexpected keyword argument 'proxies'\", 'gemini_1.5_flash': '404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.'}",
         "time": "2026-07-09T20:13:54.361506+00:00"
       }
     ],
