@@ -4,24 +4,41 @@
     "video_type": "shorts",
     "topic": "Synthesia",
     "status": "paused_on_error",
-    "current_step": "script",
+    "current_step": "visuals",
     "completed_steps": [
       "research",
-      "script"
+      "script",
+      "voiceover",
+      "visuals"
     ],
-    "failed_step": "voiceover",
+    "failed_step": "captions",
     "error_log": [
       {
         "step": "voiceover",
         "error": "All providers failed. Details: {'edge_tts': \"403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&Sec-MS-GEC=0EDAAB1A500032B175571939086C00E57BF76733857804D744BC7F8877835A00&Sec-MS-GEC-Version=1-130.0.2849.68&ConnectionId=69ebda2d222745b5badb446b759c07a4'\", 'elevenlabs': '402 Client Error: Payment Required for url: https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM', 'google_tts': \"Missing required secrets: ['GOOGLE_TTS_API_KEY']. Set them in GitHub repo Settings -> Secrets and variables -> Actions.\"}",
         "time": "2026-07-09T20:43:30.117522+00:00"
+      },
+      {
+        "step": "captions",
+        "error": "cannot open resource",
+        "time": "2026-07-10T12:01:38.089417+00:00"
       }
     ],
     "assets": {
       "research_path": "assets/shorts_20260709_204310_d4b609/research.json",
-      "script_path": "assets/shorts_20260709_204310_d4b609/script.json"
+      "script_path": "assets/shorts_20260709_204310_d4b609/script.json",
+      "audio_path": "assets/shorts_20260709_204310_d4b609/voice.mp3",
+      "narration_text": "Create stunning videos in seconds, not hours! From social media clips to full-blown ads, Synthesia lets you produce professional videos using AI. But here's the catch: it has a learning curve for customizing templates. Here are its top uses: quick explainer videos, AI-powered video avatars, automated video translations, instant video updates, and personalized video messages. Try Synthesia today and transform your video creation workflow",
+      "visual_paths": [
+        "assets/shorts_20260709_204310_d4b609/visuals/pixabay_0.mp4",
+        "assets/shorts_20260709_204310_d4b609/visuals/pixabay_1.mp4",
+        "assets/shorts_20260709_204310_d4b609/visuals/pixabay_2.mp4",
+        "assets/shorts_20260709_204310_d4b609/visuals/pixabay_3.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music/soft_tech_loop.mp3"
     },
     "created_at": "2026-07-09T20:43:10.900607+00:00",
-    "last_updated": "2026-07-09T20:43:30.117542+00:00"
+    "last_updated": "2026-07-10T12:01:38.089434+00:00"
   }
 }
