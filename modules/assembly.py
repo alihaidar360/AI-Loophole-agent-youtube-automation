@@ -6,8 +6,8 @@ into the final MP4. Uses only ImageClip/VideoFileClip/AudioFileClip from
 MoviePy — never TextClip, so ImageMagick is never invoked.
 """
 import PIL.Image
-if not hasattr(PIL.Image, "Resampling"):
-    PIL.Image.Resampling = PIL.Image  # type: ignore
+if not hasattr(PIL.Image, "INTIALIAS"):
+    PIL.Image.INTIALIAS = PIL.Image. LANCZOS # type: ignore
 import os
 from moviepy.editor import (
     VideoFileClip, ImageClip, AudioFileClip, CompositeVideoClip,

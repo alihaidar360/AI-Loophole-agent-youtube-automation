@@ -4,7 +4,9 @@ Entry point for the daily Shorts workflow (.github/workflows/shorts_pipeline.yml
 Called twice a day per the user's schedule (morning + evening) to produce
 2 Shorts/day.
 """
-
+import PIL.Image
+if not hasattr(PIL.Image, "INTIALIAS"):
+    PIL.Image.INTIALIAS = PIL.Image. LANCZOS # type: ignore
 from core.pipeline_runner import run_pipeline
 
 if __name__ == "__main__":
