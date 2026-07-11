@@ -5,7 +5,9 @@ Combines: b-roll/visuals + voiceover + caption PNG overlays + background music
 into the final MP4. Uses only ImageClip/VideoFileClip/AudioFileClip from
 MoviePy — never TextClip, so ImageMagick is never invoked.
 """
-
+import PIL.Image
+if not hasattr(PIL.Image, "Resampling"):
+    PIL.Image.Resampling = PIL.Image  # type: ignore
 import os
 from moviepy.editor import (
     VideoFileClip, ImageClip, AudioFileClip, CompositeVideoClip,
