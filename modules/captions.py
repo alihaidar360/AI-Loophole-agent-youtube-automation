@@ -33,11 +33,24 @@ def transcribe_with_timestamps(audio_path: str) -> list:
             words.append({"word": w["word"].strip(), "start": w["start"], "end": w["end"]})
     return words
 
-
 def _load_font(size: int, bold: bool = True) -> ImageFont.FreeTypeFont:
     font_path = Config.FONT_BOLD if bold else Config.FONT_REGULAR
-    return ImageFont.truetype(font_path, size)
+    
+    # 1. Pehle check karein agar specified font file majood hai
+    if font_path and os.path.exists(font_path):
+        try:
+            return ImageFont.truetype(font_path, size)
+        except OSError:
+            print(f"[WARNING] Could not open font at {font_path}, trying fallbacks...")
 
+    # 2. Backup: Agar GitHub runner (Linux) par default fonts majood hain
+    linux_fallback = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    if os.path.exists(linux_fallback):
+        return ImageFont.truetype(linux_fallback, size)
+
+    # 3. Absolute Fallback: Agar kuch bhi nahi milta toh crash na ho (Pillow Default)
+    print("[WARNING] Using Pillow default font. Subtitles might look small.")
+    return ImageFont.load_default()
 
 # ---------- Shorts: Kinetic captions ----------
 def render_kinetic_caption_frame(all_words: list, active_index: int,
