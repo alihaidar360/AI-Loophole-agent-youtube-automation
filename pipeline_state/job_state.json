@@ -20,5 +20,27 @@
     "created_at": "2026-07-11T13:31:02.239019+00:00",
     "last_updated": "2026-07-11T13:37:08.866418+00:00",
     "youtube_video_id": "xsbGZhMQdIA"
+  },
+  "shorts_20260711_191326_a21bdb": {
+    "job_id": "shorts_20260711_191326_a21bdb",
+    "video_type": "shorts",
+    "topic": "Canva Magic Studio",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-11T19:13:26.110647+00:00",
+    "last_updated": "2026-07-11T19:17:43.679347+00:00",
+    "youtube_video_id": "Gu6KbF3txYI"
   }
 }
