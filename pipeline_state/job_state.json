@@ -64,5 +64,27 @@
     "created_at": "2026-07-12T10:40:34.537984+00:00",
     "last_updated": "2026-07-12T10:46:11.166081+00:00",
     "youtube_video_id": "fMpoajzp_aE"
+  },
+  "longform_20260712_120348_8bf030": {
+    "job_id": "longform_20260712_120348_8bf030",
+    "video_type": "longform",
+    "topic": "Cluely",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-12T12:03:48.090011+00:00",
+    "last_updated": "2026-07-12T12:32:53.848689+00:00",
+    "youtube_video_id": "FzwLtdonlEI"
   }
 }
