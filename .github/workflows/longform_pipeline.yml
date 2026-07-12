@@ -66,4 +66,5 @@ jobs:
           git config user.email "actions@github.com"
           git add pipeline_state/job_state.json pipeline_state/published_log.json
           git diff --staged --quiet || git commit -m "chore: update longform pipeline state [skip ci]"
+          git pull origin main --rebase
           git push
