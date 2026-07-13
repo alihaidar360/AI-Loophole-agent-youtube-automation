@@ -130,5 +130,27 @@
     "created_at": "2026-07-13T12:13:49.572515+00:00",
     "last_updated": "2026-07-13T12:18:11.620523+00:00",
     "youtube_video_id": "u8CJxWJjZpU"
+  },
+  "longform_20260713_122833_057e45": {
+    "job_id": "longform_20260713_122833_057e45",
+    "video_type": "longform",
+    "topic": "Suno AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-13T12:28:33.273398+00:00",
+    "last_updated": "2026-07-13T12:56:12.305680+00:00",
+    "youtube_video_id": "E0GR7od0XWU"
   }
 }

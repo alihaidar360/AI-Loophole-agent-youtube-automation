@@ -40,5 +40,12 @@
     "video_type": "shorts",
     "youtube_video_id": "u8CJxWJjZpU",
     "published_at": "2026-07-13T12:18:11.620269+00:00"
+  },
+  {
+    "job_id": "longform_20260713_122833_057e45",
+    "topic": "Suno AI",
+    "video_type": "longform",
+    "youtube_video_id": "E0GR7od0XWU",
+    "published_at": "2026-07-13T12:56:12.305426+00:00"
   }
 ]
