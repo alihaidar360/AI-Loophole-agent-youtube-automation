@@ -108,5 +108,27 @@
     "created_at": "2026-07-12T19:14:22.380062+00:00",
     "last_updated": "2026-07-12T19:18:37.612506+00:00",
     "youtube_video_id": "pfwfYzM-T_E"
+  },
+  "shorts_20260713_121349_817d51": {
+    "job_id": "shorts_20260713_121349_817d51",
+    "video_type": "shorts",
+    "topic": "Pika Labs",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-13T12:13:49.572515+00:00",
+    "last_updated": "2026-07-13T12:18:11.620523+00:00",
+    "youtube_video_id": "u8CJxWJjZpU"
   }
 }
