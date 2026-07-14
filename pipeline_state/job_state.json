@@ -196,5 +196,27 @@
     "created_at": "2026-07-14T10:53:25.443208+00:00",
     "last_updated": "2026-07-14T10:57:20.622783+00:00",
     "youtube_video_id": "6vxQH1IIhmw"
+  },
+  "shorts_20260714_192832_36bd3e": {
+    "job_id": "shorts_20260714_192832_36bd3e",
+    "video_type": "shorts",
+    "topic": "Grammarly AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-14T19:28:32.131255+00:00",
+    "last_updated": "2026-07-14T19:32:53.779250+00:00",
+    "youtube_video_id": "KjogXciy7IU"
   }
 }
