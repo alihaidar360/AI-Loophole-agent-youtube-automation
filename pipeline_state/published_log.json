@@ -89,5 +89,12 @@
     "video_type": "shorts",
     "youtube_video_id": "ibMiVC-ZJdw",
     "published_at": "2026-07-16T11:12:32.581180+00:00"
+  },
+  {
+    "job_id": "longform_20260716_112908_b0204b",
+    "topic": "Cursor AI",
+    "video_type": "longform",
+    "youtube_video_id": "nEncLjDkBXg",
+    "published_at": "2026-07-16T11:54:24.616584+00:00"
   }
 ]

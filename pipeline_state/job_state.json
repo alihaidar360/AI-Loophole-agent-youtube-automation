@@ -284,5 +284,27 @@
     "created_at": "2026-07-16T11:07:03.529183+00:00",
     "last_updated": "2026-07-16T11:12:32.581343+00:00",
     "youtube_video_id": "ibMiVC-ZJdw"
+  },
+  "longform_20260716_112908_b0204b": {
+    "job_id": "longform_20260716_112908_b0204b",
+    "video_type": "longform",
+    "topic": "Cursor AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-16T11:29:08.581790+00:00",
+    "last_updated": "2026-07-16T11:54:24.616847+00:00",
+    "youtube_video_id": "nEncLjDkBXg"
   }
 }
