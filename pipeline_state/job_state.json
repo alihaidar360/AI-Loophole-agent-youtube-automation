@@ -306,5 +306,46 @@
     "created_at": "2026-07-16T11:29:08.581790+00:00",
     "last_updated": "2026-07-16T11:54:24.616847+00:00",
     "youtube_video_id": "nEncLjDkBXg"
+  },
+  "shorts_20260716_192226_3fcd88": {
+    "job_id": "shorts_20260716_192226_3fcd88",
+    "video_type": "shorts",
+    "topic": "Lovable AI",
+    "status": "paused_on_error",
+    "current_step": "assembly",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly"
+    ],
+    "failed_step": "upload",
+    "error_log": [
+      {
+        "step": "upload",
+        "error": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
+        "time": "2026-07-16T19:26:37.322420+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260716_192226_3fcd88/research.json",
+      "script_path": "assets/shorts_20260716_192226_3fcd88/script.json",
+      "audio_path": "assets/shorts_20260716_192226_3fcd88/voice.mp3",
+      "narration_text": "Want to build an app in minutes? Here are 5 things you need to know: it's incredibly user-friendly, has a drag-and-drop interface, offers affordable pricing plans, has a wide range of customization options, but limited integration with other tools. Lovable AI is a revolutionary app and website builder. Try Lovable AI today and start building your dream app or website in no time!",
+      "visual_paths": [
+        "assets/shorts_20260716_192226_3fcd88/visuals/pixabay_0.mp4",
+        "assets/shorts_20260716_192226_3fcd88/visuals/pixabay_1.mp4",
+        "assets/shorts_20260716_192226_3fcd88/visuals/pixabay_2.mp4",
+        "assets/shorts_20260716_192226_3fcd88/visuals/pixabay_3.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music/soft_tech_loop.mp3",
+      "caption_meta_path": "assets/shorts_20260716_192226_3fcd88/captions.json",
+      "final_video_path": "assets/shorts_20260716_192226_3fcd88/final_video.mp4"
+    },
+    "created_at": "2026-07-16T19:22:26.205748+00:00",
+    "last_updated": "2026-07-16T19:26:37.322437+00:00"
   }
 }
