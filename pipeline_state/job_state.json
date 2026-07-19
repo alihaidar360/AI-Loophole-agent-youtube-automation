@@ -347,6 +347,11 @@
         "step": "upload",
         "error": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
         "time": "2026-07-18T19:13:31.102489+00:00"
+      },
+      {
+        "step": "upload",
+        "error": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
+        "time": "2026-07-19T10:40:52.511417+00:00"
       }
     ],
     "assets": {
@@ -366,6 +371,6 @@
       "final_video_path": "assets/shorts_20260716_192226_3fcd88/final_video.mp4"
     },
     "created_at": "2026-07-16T19:22:26.205748+00:00",
-    "last_updated": "2026-07-18T19:13:31.102508+00:00"
+    "last_updated": "2026-07-19T10:40:52.511438+00:00"
   }
 }
