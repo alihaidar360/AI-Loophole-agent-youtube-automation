@@ -382,5 +382,52 @@
     },
     "created_at": "2026-07-16T19:22:26.205748+00:00",
     "last_updated": "2026-07-20T11:52:38.266874+00:00"
+  },
+  "longform_20260720_121257_6d42ff": {
+    "job_id": "longform_20260720_121257_6d42ff",
+    "video_type": "longform",
+    "topic": "Tome AI",
+    "status": "paused_on_error",
+    "current_step": "assembly",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly"
+    ],
+    "failed_step": "upload",
+    "error_log": [
+      {
+        "step": "upload",
+        "error": "('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})",
+        "time": "2026-07-20T12:39:01.616394+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/longform_20260720_121257_6d42ff/research.json",
+      "script_path": "assets/longform_20260720_121257_6d42ff/script.json",
+      "audio_path": "assets/longform_20260720_121257_6d42ff/voice.mp3",
+      "narration_text": "Welcome to this deep dive into Tome AI, a tool that has been generating quite a buzz. In this video, we'll explore what Tome AI is, its capabilities, and address some of the most pressing questions users have, including its relation to PPT, its free version, and its presentation-making features. We'll also distinguish it from unrelated queries, like Rome Airport, to give you a clear understanding. Tome AI is an artificial intelligence-powered tool designed to aid in the creation of presentations and storytelling. It uses AI to help users generate content, design slides, and even provide suggestions for your presentations. This can be particularly useful for those who struggle with creating engaging content or need help in designing visually appealing slides. One of the common questions we've seen is about Tome AI's compatibility or comparison with PowerPoint. While Tome AI can generate presentations, it's not a direct replacement for PowerPoint but rather a tool that can work in conjunction with it. Tome AI's strength lies in its AI-driven content and design suggestions, which can then be exported and refined in PowerPoint or other presentation software. The cost and availability of a free version of Tome AI are significant concerns for potential users. As of our last update, Tome AI offers a limited free plan, allowing users to experience its features before deciding to upgrade to a paid subscription for more advanced capabilities and larger storage. The free version is a great way to test the waters, but for heavy users or those requiring more storage and features, the paid plans are available. At its core, Tome AI is designed to enhance your storytelling and presentation skills. It achieves this by providing AI-driven suggestions for your content, helping you organize your thoughts, and even assisting in the design of your slides. For those who struggle with creating compelling narratives or visually engaging presentations, Tome AI can be a valuable tool. While Tome AI presents several strengths, it's also important to acknowledge its limitations. The AI, as powerful as it is, sometimes may not fully understand the context or nuances of human communication, leading to suggestions that might not perfectly fit your needs. Additionally, the quality of the output can depend heavily on the quality of the input, requiring users to still invest time in refining their work. In conclusion, Tome AI is a powerful tool for anyone looking to elevate their presentation and storytelling game. By understanding its capabilities, limitations, and how it can fit into your workflow, you can make informed decisions about whether it's the right tool for you. Remember, while it can be incredibly helpful, it's a tool, not a replacement for your creativity and judgment.",
+      "visual_paths": [
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_0.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_1.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_2.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_3.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_4.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_5.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_6.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_7.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_8.mp4",
+        "assets/longform_20260720_121257_6d42ff/visuals/pixabay_9.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music/soft_tech_loop.mp3",
+      "caption_meta_path": "assets/longform_20260720_121257_6d42ff/captions.json",
+      "final_video_path": "assets/longform_20260720_121257_6d42ff/final_video.mp4"
+    },
+    "created_at": "2026-07-20T12:12:57.044614+00:00",
+    "last_updated": "2026-07-20T12:39:01.616406+00:00"
   }
 }
