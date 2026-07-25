@@ -20,5 +20,27 @@
     "created_at": "2026-07-25T07:41:30.164215+00:00",
     "last_updated": "2026-07-25T07:46:30.073154+00:00",
     "youtube_video_id": "L2ZLDaFJMIQ"
+  },
+  "longform_20260725_082032_68f2cf": {
+    "job_id": "longform_20260725_082032_68f2cf",
+    "video_type": "longform",
+    "topic": "Jasper AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-25T08:20:32.596367+00:00",
+    "last_updated": "2026-07-25T08:47:25.934391+00:00",
+    "youtube_video_id": "mcSKet6uI0E"
   }
 }

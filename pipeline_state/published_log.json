@@ -103,5 +103,12 @@
     "video_type": "shorts",
     "youtube_video_id": "L2ZLDaFJMIQ",
     "published_at": "2026-07-25T07:46:30.073001+00:00"
+  },
+  {
+    "job_id": "longform_20260725_082032_68f2cf",
+    "topic": "Jasper AI",
+    "video_type": "longform",
+    "youtube_video_id": "mcSKet6uI0E",
+    "published_at": "2026-07-25T08:47:25.934123+00:00"
   }
 ]
