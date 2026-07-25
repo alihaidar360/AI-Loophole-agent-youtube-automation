@@ -96,5 +96,12 @@
     "video_type": "longform",
     "youtube_video_id": "nEncLjDkBXg",
     "published_at": "2026-07-16T11:54:24.616584+00:00"
+  },
+  {
+    "job_id": "shorts_20260725_074130_626d9d",
+    "topic": "Descript",
+    "video_type": "shorts",
+    "youtube_video_id": "L2ZLDaFJMIQ",
+    "published_at": "2026-07-25T07:46:30.073001+00:00"
   }
 ]

@@ -1,1 +1,24 @@
-{}
+{
+  "shorts_20260725_074130_626d9d": {
+    "job_id": "shorts_20260725_074130_626d9d",
+    "video_type": "shorts",
+    "topic": "Descript",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-25T07:41:30.164215+00:00",
+    "last_updated": "2026-07-25T07:46:30.073154+00:00",
+    "youtube_video_id": "L2ZLDaFJMIQ"
+  }
+}
