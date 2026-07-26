@@ -108,5 +108,27 @@
     "created_at": "2026-07-26T10:49:50.608975+00:00",
     "last_updated": "2026-07-26T10:55:20.996766+00:00",
     "youtube_video_id": "_NP-Bx5BW84"
+  },
+  "shorts_20260726_192049_bc268e": {
+    "job_id": "shorts_20260726_192049_bc268e",
+    "video_type": "shorts",
+    "topic": "Cluely",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-26T19:20:49.742187+00:00",
+    "last_updated": "2026-07-26T19:24:46.599448+00:00",
+    "youtube_video_id": "2Vi6hMJ28p8"
   }
 }
