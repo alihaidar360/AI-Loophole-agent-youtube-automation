@@ -152,5 +152,12 @@
     "video_type": "longform",
     "youtube_video_id": "27YQQfaCV8M",
     "published_at": "2026-07-27T13:16:37.431981+00:00"
+  },
+  {
+    "job_id": "shorts_20260727_194356_9a1942",
+    "topic": "Tome AI",
+    "video_type": "shorts",
+    "youtube_video_id": "pNNkpkl1jJU",
+    "published_at": "2026-07-27T19:50:09.215480+00:00"
   }
 ]
