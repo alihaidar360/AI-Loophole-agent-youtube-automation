@@ -350,5 +350,27 @@
     "created_at": "2026-07-30T19:42:44.084508+00:00",
     "last_updated": "2026-07-30T19:48:09.054553+00:00",
     "youtube_video_id": "Sr6h86rMfwY"
+  },
+  "shorts_20260731_113411_111ac1": {
+    "job_id": "shorts_20260731_113411_111ac1",
+    "video_type": "shorts",
+    "topic": "v0 by Vercel",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-07-31T11:34:11.133808+00:00",
+    "last_updated": "2026-07-31T11:39:27.226406+00:00",
+    "youtube_video_id": "hfubkElzqXQ"
   }
 }
