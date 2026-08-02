@@ -460,5 +460,27 @@
     "created_at": "2026-08-02T10:46:47.385768+00:00",
     "last_updated": "2026-08-02T10:51:58.797631+00:00",
     "youtube_video_id": "OK9duF3b4hI"
+  },
+  "shorts_20260802_191950_9a8e0e": {
+    "job_id": "shorts_20260802_191950_9a8e0e",
+    "video_type": "shorts",
+    "topic": "Runway ML",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-08-02T19:19:50.940096+00:00",
+    "last_updated": "2026-08-02T19:24:08.906352+00:00",
+    "youtube_video_id": "TYVqVbk-KCE"
   }
 }
