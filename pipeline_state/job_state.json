@@ -526,5 +526,27 @@
     "created_at": "2026-08-03T12:53:08.203605+00:00",
     "last_updated": "2026-08-03T13:16:26.223047+00:00",
     "youtube_video_id": "9kSmppg_4kU"
+  },
+  "shorts_20260803_194624_761735": {
+    "job_id": "shorts_20260803_194624_761735",
+    "video_type": "shorts",
+    "topic": "Windsurf",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-08-03T19:46:24.900051+00:00",
+    "last_updated": "2026-08-03T19:50:34.842539+00:00",
+    "youtube_video_id": "ADnNhJ0YGcw"
   }
 }

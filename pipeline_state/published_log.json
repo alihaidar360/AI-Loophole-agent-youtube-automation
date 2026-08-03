@@ -264,5 +264,12 @@
     "video_type": "longform",
     "youtube_video_id": "9kSmppg_4kU",
     "published_at": "2026-08-03T13:16:26.222653+00:00"
+  },
+  {
+    "job_id": "shorts_20260803_194624_761735",
+    "topic": "Windsurf",
+    "video_type": "shorts",
+    "youtube_video_id": "ADnNhJ0YGcw",
+    "published_at": "2026-08-03T19:50:34.842086+00:00"
   }
 ]
