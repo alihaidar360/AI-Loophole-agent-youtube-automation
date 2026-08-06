@@ -306,5 +306,12 @@
     "video_type": "shorts",
     "youtube_video_id": "1NOZIOW1lDM",
     "published_at": "2026-08-06T11:35:04.177277+00:00"
+  },
+  {
+    "job_id": "longform_20260806_115929_3b8502",
+    "topic": "Perplexity AI",
+    "video_type": "longform",
+    "youtube_video_id": "rri0trPZ6us",
+    "published_at": "2026-08-06T12:29:02.684557+00:00"
   }
 ]
