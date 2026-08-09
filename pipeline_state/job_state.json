@@ -790,5 +790,27 @@
     "created_at": "2026-08-08T18:46:33.934883+00:00",
     "last_updated": "2026-08-08T18:51:27.182194+00:00",
     "youtube_video_id": "ivEA8mgSHSs"
+  },
+  "shorts_20260809_094754_6497b6": {
+    "job_id": "shorts_20260809_094754_6497b6",
+    "video_type": "shorts",
+    "topic": "Lovable AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-08-09T09:47:54.225561+00:00",
+    "last_updated": "2026-08-09T09:52:23.536560+00:00",
+    "youtube_video_id": "au0WCZvlwdo"
   }
 }
