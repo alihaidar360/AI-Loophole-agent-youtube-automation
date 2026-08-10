@@ -369,5 +369,12 @@
     "video_type": "shorts",
     "youtube_video_id": "PUxWM5Up5bI",
     "published_at": "2026-08-10T10:30:24.089979+00:00"
+  },
+  {
+    "job_id": "longform_20260810_110221_65e19f",
+    "topic": "Canva Magic Studio",
+    "video_type": "longform",
+    "youtube_video_id": "0OjyxcEmvF8",
+    "published_at": "2026-08-10T11:21:13.922289+00:00"
   }
 ]
