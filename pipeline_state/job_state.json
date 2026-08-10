@@ -834,5 +834,27 @@
     "created_at": "2026-08-09T18:51:18.040014+00:00",
     "last_updated": "2026-08-09T18:55:42.483729+00:00",
     "youtube_video_id": "qdQldBNsgj8"
+  },
+  "shorts_20260810_102603_4e0eae": {
+    "job_id": "shorts_20260810_102603_4e0eae",
+    "video_type": "shorts",
+    "topic": "Claude AI",
+    "status": "archived",
+    "current_step": "upload",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-08-10T10:26:03.746292+00:00",
+    "last_updated": "2026-08-10T10:30:24.090278+00:00",
+    "youtube_video_id": "PUxWM5Up5bI"
   }
 }
