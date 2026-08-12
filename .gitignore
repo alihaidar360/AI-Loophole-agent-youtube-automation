@@ -1,6 +1,10 @@
 # Binary assets — cached by GitHub Actions, never committed
 assets/
 
+# Node / Remotion
+remotion/node_modules/
+remotion/out/
+
 # Local environment
 .env
 venv/

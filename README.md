@@ -1,128 +1,129 @@
-# ToolVerdict — AI YouTube Automation Pipeline
+# ToolVerdict — AI YouTube Automation Pipeline (v2)
 
-100% free, GitHub Actions–powered pipeline that researches, scripts, voices,
-edits, and publishes AI-tool review videos (Shorts + Long-form) for a
-Western (US/UK) audience — fully automated after setup.
+100% free, GitHub Actions–powered pipeline producing both Shorts and
+Long-form AI-tool review videos with a researcher persona, Remotion-based
+motion graphics, sound design, and expressive thumbnails — fully automated.
 
----
+## What's new in v2
+- **Researcher-persona scripts** — first-person, hands-on-verdict structure,
+  10-13 min long-form / 45-60 sec Shorts, both independently tuned
+- **Remotion motion graphics** (Node.js/React) — Ken Burns zoom, kinetic
+  captions (Shorts) / standard subtitles (Long-form), replacing the old
+  static-crossfade renderer
+- **Sound design layer** — whoosh/impact/riser/click cues on cuts and
+  chapter transitions
+- **New voice priority**: Piper TTS (local, offline, zero setup) →
+  Edge-TTS (zero setup) → ElevenLabs (optional). No billing account or
+  credit card required anywhere in the voice pipeline.
+- **Expressive thumbnails/covers** — a consistent illustrated character
+  with 3 expressions (excited/skeptical/neutral) driven by the video's
+  verdict, plus a short psychological headline (not the raw tool name)
 
-## 📁 Project Structure
-
+## Project Structure
 ```
 ├── .github/workflows/
-│   ├── shorts_pipeline.yml       # daily, 2x/day trigger
-│   └── longform_pipeline.yml     # 2x/week trigger
+│   ├── shorts_pipeline.yml
+│   └── longform_pipeline.yml
 ├── core/
-│   ├── state_manager.py          # job_state.json / resume logic
-│   ├── fallback.py                # 3-tier try/except chain
-│   └── pipeline_runner.py         # main orchestrator
+│   ├── state_manager.py
+│   ├── fallback.py
+│   └── pipeline_runner.py
 ├── modules/
-│   ├── research.py                # Trends -> Reddit -> autocomplete
-│   ├── scripting.py               # Gemini -> Groq
-│   ├── audio.py                   # Edge-TTS -> ElevenLabs -> Google TTS
-│   ├── visuals.py                 # Pexels -> Pixabay -> Pollinations
-│   ├── captions.py                # Whisper + Pillow (no ImageMagick)
-│   ├── assembly.py                # MoviePy final render
-│   ├── upload.py                  # YouTube Data API v3
-│   └── topic_selector.py          # picks next AI tool to cover
-├── pipeline_state/                # job_state.json, published_log.json (committed)
-├── assets/                        # binaries — cached only, never committed
-├── fonts/                         # put .ttf files here
+│   ├── research.py       research.py    Trends -> Reddit -> autocomplete
+│   ├── scripting.py      Gemini -> Groq, researcher persona
+│   ├── audio.py          Google TTS -> ElevenLabs -> Edge-TTS
+│   ├── visuals.py        Pexels -> Pixabay -> Pollinations, per-chapter
+│   ├── sound_design.py   SFX cue placement
+│   ├── captions.py       Whisper word timestamps -> kinetic/subtitle data
+│   ├── assembly.py       Builds Remotion props, renders via Remotion CLI
+│   ├── thumbnail.py      Pillow-based expressive character thumbnails
+│   ├── upload.py         YouTube Data API v3
+│   └── topic_selector.py
+├── remotion/              Node.js/React motion graphics engine
+│   ├── package.json
+│   └── src/
+│       ├── Root.jsx              registers both Compositions
+│       ├── compositions/
+│       │   ├── ShortsVideo.jsx
+│       │   └── LongformVideo.jsx
+│       └── components/
+│           ├── KenBurnsClip.jsx
+│           ├── KineticCaption.jsx
+│           ├── SubtitleCaption.jsx
+│           └── SfxLayer.jsx
+├── pipeline_state/        job_state.json, published_log.json (committed)
+├── assets/                binaries — cached only, never committed
+├── fonts/, assets/music/, assets/sfx/   see each folder's README.txt
 ├── orchestrator_shorts.py
 ├── orchestrator_longform.py
 └── requirements.txt
 ```
 
----
+## Setup (only what's NEW vs the v1 guide — follow the original A-Z guide
+## for GitHub/YouTube/Reddit/Gemini/Groq/Pexels/Pixabay account setup first)
 
-## 🚀 Setup Guide (Step-by-Step)
+### 1. Voice — zero setup needed (no billing, ever)
+Primary voice is now **Piper TTS**, which runs locally on the GitHub
+Actions runner — no account, no API key, no credit card. The voice
+model (~60MB) downloads automatically from a public Hugging Face
+repository on first run and is cached by the existing `assets/` cache
+step, so it won't re-download every time. Nothing to configure.
 
-### Step 1 — Create the GitHub repo
-1. Go to https://github.com/new
-2. Name it (e.g. `toolverdict-pipeline`), set to **Public** (unlimited free Actions minutes)
-3. Upload this entire project folder to the repo (drag-and-drop on github.com works, or `git push` if you're comfortable with git)
+(Earlier versions of this guide used Google Cloud TTS, which requires a
+billing account/card on file even to stay within its free tier. That
+step has been removed — Piper replaces it with an equal-or-better result
+and zero payment info anywhere in the system.)
 
-### Step 2 — Create the YouTube channel
-1. Go to https://youtube.com, sign in with a Google account (create a fresh one if you want it separate from your personal account)
-2. Click your profile icon → **Create a channel**
-3. Name it (e.g. "ToolVerdict"), add a simple logo/banner (Canva free tier)
+### 2. Fonts — 3 files now needed (was 2)
+Download from fonts.google.com: `Montserrat-Bold.ttf`, `Montserrat-Black.ttf`
+(the Black weight specifically), `Roboto-Regular.ttf` → upload to `/fonts`
 
-### Step 3 — Google Cloud Project + YouTube Data API
-1. Go to https://console.cloud.google.com/
-2. Create a new project (e.g. "toolverdict-automation")
-3. Go to **APIs & Services → Library**, search "YouTube Data API v3", click **Enable**
-4. Go to **APIs & Services → Credentials → Create Credentials → OAuth client ID**
-   - Application type: **Desktop app**
-   - Download the JSON — this gives you `client_id` and `client_secret`
-5. Go to **OAuth consent screen** → set to "External" → add your own Google account as a **Test User** (this avoids Google's app-verification review since it's just for you)
+### 3. Sound effects (new)
+Download 5 short, license-free SFX from Pixabay Sound Effects or Mixkit,
+name them exactly as listed in `/assets/sfx/README.txt`, upload there.
 
-### Step 4 — Generate your YouTube Refresh Token (one-time, local step)
-This is the only step that needs to run on your own computer once:
-```bash
-pip install google-auth-oauthlib
-python -c "
-from google_auth_oauthlib.flow import InstalledAppFlow
-flow = InstalledAppFlow.from_client_config(
-    {'installed': {
-        'client_id': 'YOUR_CLIENT_ID',
-        'client_secret': 'YOUR_CLIENT_SECRET',
-        'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
-        'token_uri': 'https://oauth2.googleapis.com/token',
-    }},
-    scopes=['https://www.googleapis.com/auth/youtube.upload',
-            'https://www.googleapis.com/auth/youtube']
-)
-creds = flow.run_local_server(port=0)
-print('REFRESH TOKEN:', creds.refresh_token)
-"
-```
-A browser window opens → log in with the SAME Google account as your YouTube channel → approve → copy the printed refresh token.
+### 4. Node.js — no action needed
+The GitHub Actions workflows now include a Node.js setup + `npm ci` step
+automatically. Nothing to install locally unless you want to preview
+Remotion compositions on your own machine (`cd remotion && npx remotion studio`).
 
-### Step 5 — Reddit API (free developer app)
-1. Go to https://www.reddit.com/prefs/apps
-2. Click **create another app...** at the bottom
-3. Type: **script**, redirect URI: `http://localhost:8080`
-4. After creating, note the string under the app name (that's `client_id`) and the "secret" field (`client_secret`)
+### 5. ElevenLabs voice ID (optional, only if you want to change it)
+Default is "Adam" (`pNInz6obpgDQGcFmaJgB`). To use a different voice,
+grab its ID from your ElevenLabs dashboard and update
+`Config.ELEVENLABS_VOICE_ID` in `config.py`.
 
-### Step 6 — Free API keys for the rest of the stack
-| Service | Where to get it | Free tier |
-|---|---|---|
-| Gemini | https://aistudio.google.com/apikey | Generous free tier |
-| Groq | https://console.groq.com/keys | Free, very fast |
-| Pexels | https://www.pexels.com/api/ | Free, unlimited |
-| Pixabay | https://pixabay.com/api/docs/ | Free, unlimited |
-| ElevenLabs (optional fallback) | https://elevenlabs.io/ | 10 min/month free |
-| Google Cloud TTS (optional fallback) | Same Google Cloud project as Step 3, enable "Cloud Text-to-Speech API" | Free tier |
+### 6. Growth features (new): cross-promotion, quality gate, analytics loop
 
-### Step 7 — Add everything as GitHub Secrets
-In your repo: **Settings → Secrets and variables → Actions → New repository secret**. Add each of these:
-```
-GEMINI_API_KEY
-GROQ_API_KEY
-REDDIT_CLIENT_ID
-REDDIT_CLIENT_SECRET
-ELEVENLABS_API_KEY       (optional, can leave blank)
-GOOGLE_TTS_API_KEY       (optional, can leave blank)
-PEXELS_API_KEY
-PIXABAY_API_KEY
-YT_CLIENT_ID
-YT_CLIENT_SECRET
-YT_REFRESH_TOKEN
-```
+These three are why the channel should actually improve over time instead
+of producing the same quality video forever:
 
-### Step 8 — Add fonts and music (required, one-time)
-- Download **Montserrat-Bold.ttf** and **Roboto-Regular.ttf** free from https://fonts.google.com and place them in `/fonts`
-- Download 3-5 royalty-free tracks from **Pixabay Audio** (https://pixabay.com/music/) — pick ones explicitly marked free for commercial use — place them in `/assets/music/` and update the file paths in `modules/visuals.py` → `SAFE_MUSIC_LIBRARY`
+- **Cross-promotion** (Shorts → Long-form) and **quality gate** (weak
+  videos publish unlisted instead of public) need NO extra setup — they
+  work automatically using data already in `pipeline_state/`.
 
-### Step 9 — Turn it on
-Go to the **Actions** tab in your repo → you'll see both workflows listed → they'll now run automatically on schedule. You can also click **Run workflow** to trigger one manually and test the whole pipeline end-to-end.
+- **Analytics feedback loop** needs one extra OAuth scope. Redo the
+  refresh-token step from the original guide (Step 3.5), but add the
+  analytics scope to the `scopes` list:
+  ```python
+  scopes=["https://www.googleapis.com/auth/youtube.upload",
+          "https://www.googleapis.com/auth/youtube",
+          "https://www.googleapis.com/auth/yt-analytics.readonly"]
+  ```
+  Replace the `YT_REFRESH_TOKEN` GitHub Secret with the new token this
+  produces (old one won't have analytics access).
 
----
+  This also adds a **new weekly workflow** (`analytics_review.yml`,
+  runs Sundays) — nothing to configure, it uses the same YouTube secrets.
+  It won't produce useful insights until at least ~10 videos are
+  published; until then `performance_insights.json` just says
+  `"insufficient_data"` and scripting.py silently skips using it.
 
-## ⚠️ Before your first real run
-Trigger one workflow manually (`workflow_dispatch`) and **watch the Actions log** closely for the first 2-3 runs. This catches API key typos, quota issues, or format errors before they burn through your free-tier credits repeatedly.
+## Everything else
+Follow the original A-Z setup roadmap (GitHub repo, YouTube channel,
+Google Cloud OAuth + refresh token, Reddit app, Gemini/Groq/Pexels/Pixabay
+keys, GitHub Secrets) exactly as before — only the additions above are new.
 
-## 🔍 Monitoring
-- `pipeline_state/job_state.json` — current/paused job status
-- `pipeline_state/published_log.json` — full history of what's been published
-- Both are plain JSON, viewable directly on GitHub without any extra tooling
+## First test run
+Trigger either workflow manually from the Actions tab. Watch the log —
+the Remotion render step is the most likely first-run failure point
+(missing SFX/font files, or `npm ci` issues) since it's entirely new.
