@@ -1,8 +1,8 @@
 """
 core/state_manager.py
-Manages job_state.json — the "database" that survives across ephemeral
-GitHub Actions runs. Every job (one video) gets a unique job_id and a
-status that tracks exactly which pipeline step it's on.
+Manages job_state.json — survives across ephemeral GitHub Actions runs.
+Both 'shorts' and 'longform' jobs share the same state machine, tracked
+independently by video_type so a resume never mixes up formats.
 """
 
 import json
@@ -11,8 +11,11 @@ import uuid
 from datetime import datetime, timezone
 from config import Config
 
-STEPS_SHORTS = ["research", "script", "voiceover", "visuals", "captions", "assembly", "upload"]
-STEPS_LONGFORM = ["research", "script", "voiceover", "visuals", "captions", "assembly", "upload"]
+# Every job — shorts or longform — walks through these same named steps.
+# Both formats get identical rigor; only the per-step *behavior* differs
+# (handled inside each module via video_type branching).
+PIPELINE_STEPS = ["research", "script", "voiceover", "visuals", "sound_design",
+                  "captions", "assembly", "thumbnail", "upload"]
 
 
 def _now():
@@ -36,7 +39,6 @@ def _save_all_jobs(jobs: dict):
 
 
 def create_job(video_type: str, topic: str) -> str:
-    """video_type: 'shorts' or 'longform'"""
     jobs = _load_all_jobs()
     job_id = f"{video_type}_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:6]}"
     jobs[job_id] = {
@@ -57,8 +59,6 @@ def create_job(video_type: str, topic: str) -> str:
 
 
 def get_incomplete_jobs(video_type: str) -> list:
-    """Returns jobs that are not yet 'completed' — used to resume before
-    starting a brand new job. Oldest first."""
     jobs = _load_all_jobs()
     incomplete = [
         j for j in jobs.values()
@@ -91,17 +91,18 @@ def mark_step_failed(job_id: str, step: str, error_msg: str):
     _save_all_jobs(jobs)
 
 
-def mark_job_completed(job_id: str, youtube_video_id: str):
+def mark_job_completed(job_id: str, youtube_video_id: str, title: str = "",
+                        privacy_status: str = "public", verdict_sentiment: str = "neutral"):
     jobs = _load_all_jobs()
     job = jobs[job_id]
     job["status"] = "completed"
     job["youtube_video_id"] = youtube_video_id
     job["last_updated"] = _now()
     _save_all_jobs(jobs)
-    _append_published_log(job)
+    _append_published_log(job, title, privacy_status, verdict_sentiment)
 
 
-def _append_published_log(job: dict):
+def _append_published_log(job: dict, title: str, privacy_status: str, verdict_sentiment: str):
     log = []
     if os.path.exists(Config.PUBLISHED_LOG_FILE):
         with open(Config.PUBLISHED_LOG_FILE, "r") as f:
@@ -112,12 +113,46 @@ def _append_published_log(job: dict):
     log.append({
         "job_id": job["job_id"],
         "topic": job["topic"],
+        "title": title,
         "video_type": job["video_type"],
         "youtube_video_id": job.get("youtube_video_id"),
+        "privacy_status": privacy_status,
+        "verdict_sentiment": verdict_sentiment,
         "published_at": _now(),
     })
     with open(Config.PUBLISHED_LOG_FILE, "w") as f:
         json.dump(log, f, indent=2)
+
+
+def get_latest_published(video_type: str, only_public: bool = True) -> dict:
+    """Used for cross-promotion: find the most recent published video of a
+    given type so the other format can reference it by name + real link."""
+    if not os.path.exists(Config.PUBLISHED_LOG_FILE):
+        return None
+    with open(Config.PUBLISHED_LOG_FILE, "r") as f:
+        try:
+            log = json.load(f)
+        except json.JSONDecodeError:
+            return None
+    candidates = [e for e in log if e.get("video_type") == video_type
+                  and e.get("youtube_video_id")
+                  and (not only_public or e.get("privacy_status", "public") == "public")]
+    if not candidates:
+        return None
+    latest = sorted(candidates, key=lambda e: e["published_at"])[-1]
+    return {
+        "title": latest.get("title") or latest.get("topic"),
+        "video_id": latest["youtube_video_id"],
+        "url": f"https://youtube.com/watch?v={latest['youtube_video_id']}",
+    }
+
+
+def flag_needs_review(job_id: str, reason: str):
+    jobs = _load_all_jobs()
+    jobs[job_id]["needs_manual_review"] = True
+    jobs[job_id]["review_reason"] = reason
+    jobs[job_id]["last_updated"] = _now()
+    _save_all_jobs(jobs)
 
 
 def get_job(job_id: str) -> dict:
@@ -125,17 +160,14 @@ def get_job(job_id: str) -> dict:
 
 
 def next_step_for(job: dict) -> str:
-    """Given a job's completed_steps, figure out which step to run next."""
-    all_steps = STEPS_SHORTS if job["video_type"] == "shorts" else STEPS_LONGFORM
-    for step in all_steps:
+    for step in PIPELINE_STEPS:
         if step not in job["completed_steps"]:
             return step
-    return None  # all steps done
+    return None
 
 
 def archive_job(job_id: str):
-    """Cleanup after successful publish — keeps repo size under control."""
     jobs = _load_all_jobs()
     jobs[job_id]["status"] = "archived"
-    jobs[job_id]["assets"] = {}  # drop asset paths, binaries are cache-only anyway
+    jobs[job_id]["assets"] = {}
     _save_all_jobs(jobs)
