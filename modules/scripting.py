@@ -118,14 +118,15 @@ def _groq_call(system_prompt: str, user_prompt: str, model: str) -> dict:
     return _extract_json(completion.choices[0].message.content)
 
 
-def _cerebras_call(system_prompt: str, user_prompt: str, model: str) -> dict:
-    """Cerebras exposes an OpenAI-compatible REST API — plain requests
-    call, no extra SDK dependency needed."""
-    Config.validate(["CEREBRAS_API_KEY"])
+def _mistral_call(system_prompt: str, user_prompt: str, model: str) -> dict:
+    """Mistral's flagship model, via their free 'Experiment' tier
+    (~1B tokens/month, no credit card — phone verification only).
+    Genuinely premium/flagship-class, not just a fast open-weight model."""
+    Config.validate(["MISTRAL_API_KEY"])
     resp = requests.post(
-        "https://api.cerebras.ai/v1/chat/completions",
+        "https://api.mistral.ai/v1/chat/completions",
         headers={
-            "Authorization": f"Bearer {Config.CEREBRAS_API_KEY}",
+            "Authorization": f"Bearer {Config.MISTRAL_API_KEY}",
             "Content-Type": "application/json",
         },
         json={
@@ -150,10 +151,10 @@ def _longform_groq_gptoss(research, cross_promo=None, performance_insights=None)
                        "gpt-oss-120b")
 
 
-def _longform_cerebras_gptoss(research, cross_promo=None, performance_insights=None) -> dict:
-    return _cerebras_call(LONGFORM_SYSTEM_PROMPT,
-                           _build_user_prompt(research, cross_promo, performance_insights),
-                           "gpt-oss-120b")
+def _longform_mistral_large(research, cross_promo=None, performance_insights=None) -> dict:
+    return _mistral_call(LONGFORM_SYSTEM_PROMPT,
+                          _build_user_prompt(research, cross_promo, performance_insights),
+                          "mistral-large-latest")
 
 
 def _longform_groq_llama(research, cross_promo=None, performance_insights=None) -> dict:
@@ -169,10 +170,10 @@ def _shorts_groq_gptoss(research, cross_promo=None, performance_insights=None) -
                        "gpt-oss-120b")
 
 
-def _shorts_cerebras_gptoss(research, cross_promo=None, performance_insights=None) -> dict:
-    return _cerebras_call(SHORTS_SYSTEM_PROMPT,
-                           _build_user_prompt(research, cross_promo, performance_insights),
-                           "gpt-oss-120b")
+def _shorts_mistral_large(research, cross_promo=None, performance_insights=None) -> dict:
+    return _mistral_call(SHORTS_SYSTEM_PROMPT,
+                          _build_user_prompt(research, cross_promo, performance_insights),
+                          "mistral-large-latest")
 
 
 def _shorts_groq_llama(research, cross_promo=None, performance_insights=None) -> dict:
@@ -185,7 +186,7 @@ def generate_longform_script(research: dict, cross_promo: dict = None,
                               performance_insights: dict = None) -> dict:
     providers = [
         ("groq_gpt-oss-120b", _longform_groq_gptoss),
-        ("cerebras_gpt-oss-120b", _longform_cerebras_gptoss),
+        ("mistral_large", _longform_mistral_large),
         ("groq_llama3.3_70b", _longform_groq_llama),
     ]
     script, provider_used = run_with_fallback(providers, research, cross_promo, performance_insights)
@@ -199,7 +200,7 @@ def generate_shorts_script(research: dict, cross_promo: dict = None,
                             performance_insights: dict = None) -> dict:
     providers = [
         ("groq_gpt-oss-120b", _shorts_groq_gptoss),
-        ("cerebras_gpt-oss-120b", _shorts_cerebras_gptoss),
+        ("mistral_large", _shorts_mistral_large),
         ("groq_llama3.3_70b", _shorts_groq_llama),
     ]
     script, provider_used = run_with_fallback(providers, research, cross_promo, performance_insights)
