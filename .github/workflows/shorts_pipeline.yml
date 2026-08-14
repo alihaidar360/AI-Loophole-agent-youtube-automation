@@ -2,12 +2,13 @@ name: Shorts Pipeline
 
 on:
   schedule:
+    # Runs twice a day: 09:00 and 18:00 UTC. Adjust to your audience's peak hours.
     - cron: "0 9 * * *"
     - cron: "0 18 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch: {}  # allows manual trigger from the Actions tab
 
 permissions:
-  contents: write
+  contents: write  # needed to git push the state files back
 
 jobs:
   run-shorts-pipeline:
@@ -25,16 +26,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Set up Node.js (for Remotion motion graphics engine)
+      - name: Set up Node.js (for Remotion motion graphics)
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install ffmpeg (required by Whisper/Remotion)
+      - name: Install ffmpeg (required by Whisper/Piper/Remotion)
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
 
       - name: Install Remotion dependencies
         working-directory: remotion
@@ -48,6 +46,12 @@ jobs:
           restore-keys: |
             shorts-assets-
 
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel
+          pip install --no-build-isolation -r requirements.txt
+
       - name: Run Shorts pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -57,6 +61,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
