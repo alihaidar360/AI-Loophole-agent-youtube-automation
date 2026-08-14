@@ -1,1 +1,40 @@
-{}
+{
+  "shorts_20260814_111929_d17af3": {
+    "job_id": "shorts_20260814_111929_d17af3",
+    "video_type": "shorts",
+    "topic": "Jasper AI",
+    "status": "paused_on_error",
+    "current_step": "visuals",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals"
+    ],
+    "failed_step": "sound_design",
+    "error_log": [
+      {
+        "step": "sound_design",
+        "error": "expected str, bytes or os.PathLike object, not dict",
+        "time": "2026-08-14T11:21:04.245231+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260814_111929_d17af3/research.json",
+      "script_path": "assets/shorts_20260814_111929_d17af3/script.json",
+      "audio_path": "assets/shorts_20260814_111929_d17af3/voice.mp3",
+      "narration_text": "Jasper AI was worth $1.5 BILLION\u2014until it hit this one problem no one\u2019s talking about. The CEO just admitted it, and it\u2019s worse than you think. 1\ufe0f\u20e3 **The Hype Train**: Jasper raised $125M at a $1.5B valuation, promising AI that writes like a human. 2\ufe0f\u20e3 **The Reality Check**: Turns out, its models can\u2019t keep up with free tools like ChatGPT\u2014users are ditching it. 3\ufe0f\u20e3 **The CEO\u2019s Confession**: In a leaked memo, he admitted their tech is \u2018falling behind\u2019\u2014and layoffs are coming. 4\ufe0f\u20e3 **The Limitation**: Jasper\u2019s strength (branding) is now its weakness\u2014it\u2019s too expensive for what it delivers. 5\ufe0f\u20e3 **What\u2019s Next?**: Will they pivot or fade? One thing\u2019s clear: the AI race just got harder. Should Jasper AI pivot or double down? Comment \u2018PIVOT\u2019 or \u2018FADE\u2019\u2014and check out our breakdown on [cross_promotion: \u2018Why AI Startups Keep Failing\u2019] for the full story.",
+      "visual_paths": [
+        "assets/shorts_20260814_111929_d17af3/visuals/pexels_Jasper_AI_technology_0.mp4",
+        "assets/shorts_20260814_111929_d17af3/visuals/pexels_Jasper_AI_technology_1.mp4",
+        "assets/shorts_20260814_111929_d17af3/visuals/pexels_Jasper_AI_technology_2.mp4",
+        "assets/shorts_20260814_111929_d17af3/visuals/pexels_Jasper_AI_technology_3.mp4",
+        "assets/shorts_20260814_111929_d17af3/visuals/pexels_Jasper_AI_technology_4.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3"
+    },
+    "created_at": "2026-08-14T11:19:29.744446+00:00",
+    "last_updated": "2026-08-14T11:21:04.245245+00:00"
+  }
+}
