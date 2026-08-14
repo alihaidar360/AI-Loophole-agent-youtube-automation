@@ -1,79 +1,103 @@
 """
 modules/sound_design.py
-Stage: Sound Design Engine (NEW)
-Places SFX cues (whoosh on cuts, impact on emphasis, riser on chapter
-transitions) onto the timeline. This is what turns "silent cuts" into
-something that sounds like a professionally edited video.
+Adds automatic SFX cues (whoosh/impact/click) at cut points and emphasis
+moments — the layer that stops a video from feeling flat/generic.
 
-Shorts and Long-form get DIFFERENT densities and cue types, matching their
-distinct pacing (see Config.FORMATS[video_type]["sfx_density"]):
-  - Shorts:   dense — a cue on nearly every cut, matching fast pacing
-  - Longform: sparser — cues mainly at chapter transitions and key beats,
-              so they punctuate rather than fatigue a 10-13 min video
+SFX are NOW AUTOMATED via modules/sound_library.py (Freesound API,
+CC0-filtered) instead of requiring manually-downloaded files. Falls back
+to a local /assets/sfx/ file only if the API is unavailable.
+
+Shorts get denser cue placement (fast pacing, cut on nearly every beat).
+Long-form gets sparser, more deliberate placement (chapter transitions,
+key-number reveals) so it doesn't feel gimmicky over 10-13 minutes.
 """
 
 import os
 from config import Config
+from modules import sound_library
 
-# Curated free/CC0 SFX set the user downloads once (see README) — same
-# pattern as the background-music library: only pre-verified, license-safe
-# files are referenced here.
-SFX_LIBRARY = {
-    "whoosh": os.path.join(Config.SFX_DIR, "whoosh_1.mp3"),
-    "impact": os.path.join(Config.SFX_DIR, "impact_1.mp3"),
-    "riser": os.path.join(Config.SFX_DIR, "riser_1.mp3"),
-    "click": os.path.join(Config.SFX_DIR, "click_1.mp3"),
-    "pop": os.path.join(Config.SFX_DIR, "pop_1.mp3"),
+# Query terms used to search Freesound for each cue type. Kept generic/
+# game-audio-style terms since that's where most well-rated CC0 SFX live.
+CUE_QUERIES = {
+    "whoosh": "whoosh transition swipe",
+    "impact": "impact hit deep",
+    "click": "ui click short",
+    "riser": "riser build up short",
 }
 
 
-def _cues_for_shorts(caption_words: list, total_duration: float) -> list:
-    """Dense cue placement: a soft 'whoosh' roughly every cut interval,
-    plus a 'pop' under the very first word (the hook) for extra punch."""
-    fmt = Config.FORMATS["shorts"]
-    cut_interval = sum(fmt["cut_pace_sec"]) / 2  # midpoint of the pace range
+def _get_sfx(cue_type: str, cache_dir: str) -> str:
+    """Fetches (and caches within this job's work dir) one SFX file per
+    cue_type, so a 60-cue Short only triggers a handful of Freesound
+    searches, not 60 — cue TYPE is fetched once, then reused at every
+    timestamp that needs that type of sound."""
+    out_path = os.path.join(cache_dir, f"{cue_type}.mp3")
+    if os.path.exists(out_path):
+        return out_path
+
+    query = CUE_QUERIES.get(cue_type, cue_type)
+    try:
+        sound_library.fetch_sfx(query, out_path)
+        return out_path
+    except Exception:
+        pass  # fall through to local fallback below
+
+    local_dir = Config.SFX_DIR
+    if os.path.isdir(local_dir):
+        for fname in os.listdir(local_dir):
+            if cue_type in fname.lower() and fname.lower().endswith((".mp3", ".wav")):
+                return os.path.join(local_dir, fname)
+
+    return None  # no SFX available for this cue type — skip it, don't fail the video
+
+
+def generate_sound_cues(caption_meta: list, video_type: str, work_dir: str) -> list:
+    """
+    caption_meta: the word/subtitle timing list produced by modules/captions.py
+    video_type: 'shorts' or 'longform'
+
+    Returns a list of {"sfx_path": str, "start_time": float} cues, ready
+    to be passed into the Remotion props as extra Audio sequences.
+    """
+    cache_dir = os.path.join(work_dir, "sfx_cache")
+    os.makedirs(cache_dir, exist_ok=True)
     cues = []
 
-    if caption_words:
-        cues.append({"sfx": SFX_LIBRARY["pop"], "time": 0.0, "volume": 0.7})
-
-    t = cut_interval
-    while t < total_duration - 0.5:
-        cues.append({"sfx": SFX_LIBRARY["whoosh"], "time": round(t, 2), "volume": 0.35})
-        t += cut_interval
-
-    # Emphasize any ALL-CAPS-worthy or exclamation words with an impact cue
-    for w in caption_words:
-        if w["word"].strip(".,!?").isupper() and len(w["word"]) > 2:
-            cues.append({"sfx": SFX_LIBRARY["impact"], "time": w["start"], "volume": 0.5})
-
-    return sorted(cues, key=lambda c: c["time"])
-
-
-def _cues_for_longform(chapters_with_times: list) -> list:
-    """Sparser cue placement: a 'riser' leading into each new chapter, and
-    a soft 'click' at chapter start — enough to punctuate structure without
-    becoming noisy over 10-13 minutes."""
-    cues = []
-    for i, chapter in enumerate(chapters_with_times):
-        start = chapter["start"]
-        if i > 0:
-            cues.append({"sfx": SFX_LIBRARY["riser"], "time": max(0, start - 1.0), "volume": 0.3})
-        cues.append({"sfx": SFX_LIBRARY["click"], "time": start, "volume": 0.4})
-    return sorted(cues, key=lambda c: c["time"])
-
-
-def generate_sound_cues(video_type: str, total_duration: float,
-                         caption_data: dict, chapters_with_times: list = None) -> list:
-    """
-    Main entry point.
-    - video_type: 'shorts' or 'longform'
-    - caption_data: output of captions.generate_caption_data()
-    - chapters_with_times: for longform only — [{heading, start, end}, ...]
-    Returns a flat list of {"sfx": path, "time": float, "volume": float}
-    ready to hand to the Remotion assembly step as <Audio> sequences.
-    """
     if video_type == "shorts":
-        return _cues_for_shorts(caption_data.get("words", []), total_duration)
-    else:
-        return _cues_for_longform(chapters_with_times or [])
+        # Dense: a soft click on nearly every kinetic-caption word beat,
+        # plus a whoosh at the very start (hook impact).
+        whoosh_path = _get_sfx("whoosh", cache_dir)
+        if whoosh_path:
+            cues.append({"sfx_path": whoosh_path, "start_time": 0.0})
+
+        click_path = _get_sfx("click", cache_dir)
+        if click_path:
+            # every 3rd word beat — dense but not overwhelming
+            for i, item in enumerate(caption_meta):
+                start = item[1] if isinstance(item, (list, tuple)) else item.get("start", 0)
+                if i % 3 == 0:
+                    cues.append({"sfx_path": click_path, "start_time": start})
+
+    else:  # longform
+        # Sparse: whoosh only at chapter-style gaps (big time jumps
+        # between caption chunks signal a new section), impact only
+        # occasionally for emphasis — deliberate, not gimmicky.
+        whoosh_path = _get_sfx("whoosh", cache_dir)
+        impact_path = _get_sfx("impact", cache_dir)
+
+        prev_end = 0.0
+        for i, item in enumerate(caption_meta):
+            start = item[1] if isinstance(item, (list, tuple)) else item.get("start", 0)
+            gap = start - prev_end
+            if gap > 2.5 and whoosh_path:  # a real pause = likely a chapter/topic shift
+                cues.append({"sfx_path": whoosh_path, "start_time": start})
+            prev_end = start
+
+        # one impact cue near the video's likely "verdict" moment (~85% mark)
+        if caption_meta and impact_path:
+            total_items = len(caption_meta)
+            verdict_item = caption_meta[int(total_items * 0.85)]
+            verdict_start = verdict_item[1] if isinstance(verdict_item, (list, tuple)) else verdict_item.get("start", 0)
+            cues.append({"sfx_path": impact_path, "start_time": verdict_start})
+
+    return cues
