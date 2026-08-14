@@ -1,1 +1,238 @@
-{}
+{
+  "shorts_20260814_113817_730da7": {
+    "job_id": "shorts_20260814_113817_730da7",
+    "video_type": "shorts",
+    "topic": "Claude AI",
+    "status": "paused_on_error",
+    "current_step": "captions",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions"
+    ],
+    "failed_step": "assembly",
+    "error_log": [
+      {
+        "step": "assembly",
+        "error": "type object 'Config' has no attribute 'SHORTS_SIZE'",
+        "time": "2026-08-14T11:39:29.391448+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260814_113817_730da7/research.json",
+      "script_path": "assets/shorts_20260814_113817_730da7/script.json",
+      "audio_path": "assets/shorts_20260814_113817_730da7/voice.mp3",
+      "narration_text": "Claude AI just wrote 500 lines of flawless code in 10 seconds\u2014but here\u2019s the one thing it can\u2019t do that Gemini handles easily. Watch till the end to see the test that broke it. 1\ufe0f\u20e3 **Speed Test**: Claude generated a full React app in under a minute\u2014Gemini took 3x longer. 2\ufe0f\u20e3 **Ethics Check**: Claude refused to write a controversial algorithm, while Gemini complied. 3\ufe0f\u20e3 **The Catch**: Claude struggles with real-time data\u2014it can\u2019t fetch live API results like Gemini can. 4\ufe0f\u20e3 **Free Tier Showdown**: Claude\u2019s free version is more generous, but Gemini\u2019s Pro tier unlocks advanced features. Which AI do YOU trust more? Drop a comment\u2014then check out our full breakdown on [cross_promotion: our deep-dive video] for the full ethical debate.",
+      "visual_paths": [
+        "assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_0.mp4",
+        "assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_1.mp4",
+        "assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_2.mp4",
+        "assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_3.mp4",
+        "assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_4.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3",
+      "caption_data_path": "assets/shorts_20260814_113817_730da7/captions.json",
+      "sound_cues": [
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.78
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 1.9
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 2.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 4.06
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 4.88
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 5.42
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 6.04
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 7.36
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 7.98
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 8.54
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 9.2
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 10.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 11.38
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 12.96
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 14.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 14.94
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 15.86
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 16.78
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 18.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 19.5
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 21.86
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 22.52
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 24.3
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 25.48
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 26.82
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 27.86
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 29.38
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 30.32
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 31.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 32.18
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 33.6
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 34.86
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 35.92
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 37.66
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 38.8
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 40.12
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 41.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 42.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 43.18
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 43.74
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 44.52
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 45.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 45.9
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 47.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 48.78
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 49.56
+        }
+      ],
+      "total_duration": 50.44
+    },
+    "created_at": "2026-08-14T11:38:17.847175+00:00",
+    "last_updated": "2026-08-14T11:39:29.391456+00:00"
+  }
+}
