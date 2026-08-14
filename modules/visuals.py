@@ -156,9 +156,13 @@ def fetch_visuals_for_query(query: str, count: int, out_dir: str) -> dict:
 
 
 # ---------- Background music: automated (Freesound) with local fallback ----------
-def select_background_music(video_mood: str, out_dir: str) -> dict:
+def select_background_music(video_mood: str, out_dir: str = None) -> dict:
     """
     Returns: {"path": str, "source": "freesound" | "local_fallback" | None}
+
+    out_dir is optional — defaults to assets/music_cache/ if the caller
+    doesn't pass one (keeps this callable with just video_mood, matching
+    how earlier pipeline code invokes it).
 
     Primary: sound_library.fetch_music() — searches Freesound, CC0-only
     (public domain, zero attribution needed), downloads automatically.
@@ -167,6 +171,9 @@ def select_background_music(video_mood: str, out_dir: str) -> dict:
     sitting in /assets/music/. If neither is available, returns no music
     rather than failing the whole video.
     """
+    if out_dir is None:
+        out_dir = os.path.join(Config.ASSETS_DIR, "music_cache")
+
     profile = get_mood_profile(video_mood)
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "background_music.mp3")
