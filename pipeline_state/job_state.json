@@ -1,1 +1,40 @@
-{}
+{
+  "shorts_20260814_110449_abb8f0": {
+    "job_id": "shorts_20260814_110449_abb8f0",
+    "video_type": "shorts",
+    "topic": "ChatGPT",
+    "status": "paused_on_error",
+    "current_step": "visuals",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals"
+    ],
+    "failed_step": "sound_design",
+    "error_log": [
+      {
+        "step": "sound_design",
+        "error": "expected str, bytes or os.PathLike object, not dict",
+        "time": "2026-08-14T11:05:54.661469+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260814_110449_abb8f0/research.json",
+      "script_path": "assets/shorts_20260814_110449_abb8f0/script.json",
+      "audio_path": "assets/shorts_20260814_110449_abb8f0/voice.mp3",
+      "narration_text": "Did you know ChatGPT can generate images? From generating striking images to crafting perfect responses, we're diving into the top 5 lesser-known features of ChatGPT that will transform your experience Try these out and share your favorite hacks in the comments below, and for more tech insights, check out our podcast link in the bio",
+      "visual_paths": [
+        "assets/shorts_20260814_110449_abb8f0/visuals/pexels_ChatGPT_technology_0.mp4",
+        "assets/shorts_20260814_110449_abb8f0/visuals/pexels_ChatGPT_technology_1.mp4",
+        "assets/shorts_20260814_110449_abb8f0/visuals/pexels_ChatGPT_technology_2.mp4",
+        "assets/shorts_20260814_110449_abb8f0/visuals/pexels_ChatGPT_technology_3.mp4",
+        "assets/shorts_20260814_110449_abb8f0/visuals/pexels_ChatGPT_technology_4.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3"
+    },
+    "created_at": "2026-08-14T11:04:49.914269+00:00",
+    "last_updated": "2026-08-14T11:05:54.661482+00:00"
+  }
+}
