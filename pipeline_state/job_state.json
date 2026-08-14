@@ -4,22 +4,32 @@
     "video_type": "shorts",
     "topic": "Runway ML",
     "status": "paused_on_error",
-    "current_step": "research",
+    "current_step": "voiceover",
     "completed_steps": [
-      "research"
+      "research",
+      "script",
+      "voiceover"
     ],
-    "failed_step": "script",
+    "failed_step": "visuals",
     "error_log": [
       {
         "step": "script",
         "error": "All providers failed. Details: {'groq_llama3.3_70b': \"Client.__init__() got an unexpected keyword argument 'proxies'\", 'gemini_2.5_flash': '404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).'}",
         "time": "2026-08-14T01:28:56.324287+00:00"
+      },
+      {
+        "step": "visuals",
+        "error": "module 'modules.visuals' has no attribute 'fetch_visuals_for_query'",
+        "time": "2026-08-14T02:08:51.322750+00:00"
       }
     ],
     "assets": {
-      "research_path": "assets/shorts_20260814_012834_24004a/research.json"
+      "research_path": "assets/shorts_20260814_012834_24004a/research.json",
+      "script_path": "assets/shorts_20260814_012834_24004a/script.json",
+      "audio_path": "assets/shorts_20260814_012834_24004a/voice.mp3",
+      "narration_text": "Did you know Runway ML's Gen-3 can turn any image into a hyper-realistic video? From AI-powered video creation to a potential career, Runway ML has been making waves. However, it's not without its limitations, such as the steep learning curve for beginners. Check out their official website and explore the community forums for a referral code, and don't forget to share your creations with us for a chance to be featured in our next cross-promotion video"
     },
     "created_at": "2026-08-14T01:28:34.904658+00:00",
-    "last_updated": "2026-08-14T01:28:56.324307+00:00"
+    "last_updated": "2026-08-14T02:08:51.322759+00:00"
   }
 }
