@@ -2,13 +2,20 @@
 modules/visuals.py
 Stage 4: Visual Assets Engine
 - B-roll/images: Pexels -> Pixabay -> Pollinations.ai (AI-generated, always available)
-- Background music: NOW AUTOMATED via modules/sound_library.py (Freesound
+- Background music: automated via modules/sound_library.py (Freesound
   API, CC0-filtered) instead of requiring manually-downloaded files.
   Falls back to a local /assets/music/ file only if the API is
   unavailable — nothing breaks if that folder is empty.
 
 video_mood (e.g. "Dark Cyberpunk Neon", "Minimalist Corporate Blue") is
 used to adapt both the search keywords and a hex color palette.
+
+Two entry points for fetching b-roll:
+- fetch_visuals(): mood+keyword based, used for a whole video's generic pool
+- fetch_visuals_for_query(): ONE specific query per chapter/scene, so each
+  segment gets its own relevant footage instead of one generic query
+  repeating across the whole video (this is what makes b-roll feel
+  "researched" instead of generic-stock-footage).
 """
 
 import os
@@ -62,7 +69,7 @@ def _pexels_provider(query: str, count: int, out_dir: str) -> list:
     paths = []
     for i, v in enumerate(videos[:count]):
         link = sorted(v["video_files"], key=lambda f: f.get("width", 0))[-1]["link"]
-        out_path = os.path.join(out_dir, f"pexels_{i}.mp4")
+        out_path = os.path.join(out_dir, f"pexels_{_safe(query)}_{i}.mp4")
         _download(link, out_path)
         paths.append(out_path)
     return paths
@@ -84,7 +91,7 @@ def _pixabay_provider(query: str, count: int, out_dir: str) -> list:
     paths = []
     for i, hit in enumerate(hits[:count]):
         link = hit["videos"]["medium"]["url"]
-        out_path = os.path.join(out_dir, f"pixabay_{i}.mp4")
+        out_path = os.path.join(out_dir, f"pixabay_{_safe(query)}_{i}.mp4")
         _download(link, out_path)
         paths.append(out_path)
     return paths
@@ -96,12 +103,17 @@ def _pollinations_provider(query: str, count: int, out_dir: str) -> list:
     for i in range(count):
         prompt = requests.utils.quote(f"{query}, cinematic, high detail, 16:9")
         url = f"https://image.pollinations.ai/prompt/{prompt}?width=1920&height=1080&nologo=true"
-        out_path = os.path.join(out_dir, f"pollinations_{i}.png")
+        out_path = os.path.join(out_dir, f"pollinations_{_safe(query)}_{i}.png")
         _download(url, out_path)
         paths.append(out_path)
     if not paths:
         raise ValueError("Pollinations.ai returned no images")
     return paths
+
+
+def _safe(text: str) -> str:
+    """Filesystem-safe short slug for filenames built from a query string."""
+    return "".join(c if c.isalnum() else "_" for c in text)[:30]
 
 
 def _download(url: str, out_path: str):
@@ -112,18 +124,35 @@ def _download(url: str, out_path: str):
             f.write(chunk)
 
 
-def fetch_visuals(video_mood: str, topic_keywords: list, count: int, out_dir: str) -> dict:
+def _fetch_with_fallback(query: str, count: int, out_dir: str) -> dict:
+    """Shared 3-tier fallback logic used by both entry points below."""
     os.makedirs(out_dir, exist_ok=True)
-    profile = get_mood_profile(video_mood)
-    query = f"{topic_keywords[0]} {profile['keywords'][0]}" if topic_keywords else profile["keywords"][0]
-
     providers = [
         ("pexels", lambda q, c, d: _pexels_provider(q, c, d)),
         ("pixabay", lambda q, c, d: _pixabay_provider(q, c, d)),
         ("pollinations", lambda q, c, d: _pollinations_provider(q, c, d)),
     ]
     paths, provider_used = run_with_fallback(providers, query, count, out_dir)
-    return {"paths": paths, "provider_used": provider_used, "accent_hex": profile["accent_hex"]}
+    return {"paths": paths, "provider_used": provider_used}
+
+
+def fetch_visuals(video_mood: str, topic_keywords: list, count: int, out_dir: str) -> dict:
+    """Mood+keyword based fetch — used where one broad pool of visuals is
+    enough (e.g. Shorts, which are short enough that one relevant query
+    covers the whole video)."""
+    profile = get_mood_profile(video_mood)
+    query = f"{topic_keywords[0]} {profile['keywords'][0]}" if topic_keywords else profile["keywords"][0]
+    result = _fetch_with_fallback(query, count, out_dir)
+    result["accent_hex"] = profile["accent_hex"]
+    return result
+
+
+def fetch_visuals_for_query(query: str, count: int, out_dir: str) -> dict:
+    """ONE specific query — used per chapter/scene in long-form videos so
+    each section gets its own relevant footage instead of one generic
+    query repeating for the whole video. Does not carry mood/accent info
+    (that's fetched once for the whole video via get_mood_profile)."""
+    return _fetch_with_fallback(query, count, out_dir)
 
 
 # ---------- Background music: automated (Freesound) with local fallback ----------
@@ -133,14 +162,10 @@ def select_background_music(video_mood: str, out_dir: str) -> dict:
 
     Primary: sound_library.fetch_music() — searches Freesound, CC0-only
     (public domain, zero attribution needed), downloads automatically.
-    No manual file management required.
 
-    Fallback: if Freesound is unavailable (no API key set, quota, or
-    network issue), looks for ANY .mp3 already sitting in
-    /assets/music/ — lets a manually-added file still work if someone
-    prefers that route. If neither is available, returns no music
-    rather than failing the whole video (music is a nice-to-have, not
-    a hard requirement for a video to publish).
+    Fallback: if Freesound is unavailable, looks for ANY .mp3 already
+    sitting in /assets/music/. If neither is available, returns no music
+    rather than failing the whole video.
     """
     profile = get_mood_profile(video_mood)
     os.makedirs(out_dir, exist_ok=True)
@@ -150,7 +175,7 @@ def select_background_music(video_mood: str, out_dir: str) -> dict:
         sound_library.fetch_music(profile["music_query"], out_path)
         return {"path": out_path, "source": "freesound"}
     except Exception:
-        pass  # fall through to local fallback below
+        pass
 
     local_dir = Config.MUSIC_DIR
     if os.path.isdir(local_dir):
