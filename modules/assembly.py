@@ -16,7 +16,7 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
                     caption_data: dict, sfx_cues: list, accent_hex: str,
                     music_path: str, total_duration: float, output_path: str) -> str:
     composition_id = "ShortsVideo" if video_type == "shorts" else "LongformVideo"
-    canvas = Config.SHORTS_SIZE if video_type == "shorts" else Config.LONGFORM_SIZE
+    canvas = (1080, 1920) if video_type == "shorts" else (1920, 1080)
 
     props = {
         "audioPath": os.path.abspath(audio_path),
