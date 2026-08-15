@@ -1,54 +1,40 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
+import { Sequence, useVideoConfig } from "remotion";
 
-/**
- * Shorts-only: one-word-at-a-time kinetic captions, center-screen, active
- * word highlighted in the video's accent color. This is the Shorts-specific
- * caption treatment — Long-form uses SubtitleCaption.jsx instead, they are
- * deliberately NOT shared so each format gets pacing suited to it.
- */
 export const KineticCaption = ({ words, accentHex }) => {
-  const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const t = frame / fps;
-
-  const activeIndex = words.findIndex((w) => t >= w.start && t < w.end);
-  if (activeIndex === -1) return null;
-
-  const windowSize = 3;
-  const start = Math.max(0, activeIndex - 1);
-  const visible = words.slice(start, start + windowSize);
+  if (!words || words.length === 0) return null;
 
   return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
-      <div
-        style={{
-          display: "flex",
-          gap: 18,
-          padding: "0 60px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        {visible.map((w, i) => {
-          const isActive = start + i === activeIndex;
-          return (
-            <span
-              key={`${w.word}-${start + i}`}
+    <>
+      {words.map((w, i) => {
+        const startFrame = Math.round(w.start * fps);
+        const endFrame = Math.round(w.end * fps);
+        const duration = Math.max(endFrame - startFrame, 3);
+
+        return (
+          <Sequence key={i} from={startFrame} durationInFrames={duration}>
+            <div
               style={{
-                fontFamily: "Montserrat, Arial, sans-serif",
-                fontWeight: 800,
-                fontSize: isActive ? 92 : 70,
-                color: isActive ? accentHex : "rgba(255,255,255,0.55)",
-                WebkitTextStroke: "3px rgba(0,0,0,0.7)",
-                paintOrder: "stroke fill",
+                position: "absolute",
+                top: "50%",
+                left: 40,
+                right: 40,
+                transform: "translateY(-50%)",
+                textAlign: "center",
+                fontFamily: "Arial, Helvetica, sans-serif",
+                fontWeight: 900,
+                fontSize: 88,
+                color: accentHex || "#00E5FF",
+                WebkitTextStroke: "3px black",
+                textShadow: "0 4px 14px rgba(0,0,0,0.65)",
               }}
             >
               {w.word}
-            </span>
-          );
-        })}
-      </div>
-    </AbsoluteFill>
+            </div>
+          </Sequence>
+        );
+      })}
+    </>
   );
 };

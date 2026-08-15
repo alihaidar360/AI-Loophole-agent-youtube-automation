@@ -1,41 +1,39 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
+import { Sequence, useVideoConfig } from "remotion";
 
-/**
- * Long-form-only: standard bottom-third subtitles over a semi-transparent
- * box, sentence-chunked (not word-by-word — kinetic pacing would fatigue
- * viewers over 10-13 minutes). Deliberately separate from KineticCaption.
- */
 export const SubtitleCaption = ({ chunks }) => {
-  const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const t = frame / fps;
-
-  const active = chunks.find((c) => t >= c.start && t < c.end);
-  if (!active) return null;
+  if (!chunks || chunks.length === 0) return null;
 
   return (
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 90 }}>
-      <div
-        style={{
-          background: "rgba(0,0,0,0.55)",
-          borderRadius: 14,
-          padding: "16px 32px",
-          maxWidth: "80%",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "Roboto, Arial, sans-serif",
-            fontWeight: 500,
-            fontSize: 40,
-            color: "#FFFFFF",
-            textAlign: "center",
-          }}
-        >
-          {active.text}
-        </span>
-      </div>
-    </AbsoluteFill>
+    <>
+      {chunks.map((c, i) => {
+        const startFrame = Math.round(c.start * fps);
+        const endFrame = Math.round(c.end * fps);
+        const duration = Math.max(endFrame - startFrame, 3);
+
+        return (
+          <Sequence key={i} from={startFrame} durationInFrames={duration}>
+            <div style={{ position: "absolute", bottom: 90, left: 100, right: 100, textAlign: "center" }}>
+              <span
+                style={{
+                  background: "rgba(0,0,0,0.55)",
+                  color: "#FFFFFF",
+                  fontFamily: "Arial, Helvetica, sans-serif",
+                  fontSize: 38,
+                  fontWeight: 500,
+                  padding: "12px 28px",
+                  borderRadius: 14,
+                  display: "inline-block",
+                  lineHeight: 1.3,
+                }}
+              >
+                {c.text}
+              </span>
+            </div>
+          </Sequence>
+        );
+      })}
+    </>
   );
 };
