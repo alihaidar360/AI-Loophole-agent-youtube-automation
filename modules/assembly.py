@@ -35,7 +35,9 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
     }
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    props_path = os.path.join(os.path.dirname(output_path), "remotion_props.json")
+    props_path = os.path.abspath(
+         os.path.join(os.path.dirname(output_path), "remotion_props.json")
+     )
     with open(props_path, "w") as f:
         json.dump(props, f)
 
