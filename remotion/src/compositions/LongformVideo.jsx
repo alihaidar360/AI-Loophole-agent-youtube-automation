@@ -1,24 +1,24 @@
 import React from "react";
 import { AbsoluteFill, Audio } from "remotion";
 import { KenBurnsClip } from "../components/KenBurnsClip";
-import { KineticCaption } from "../components/KineticCaption";
+import { SubtitleCaption } from "../components/SubtitleCaption";
 import { SfxLayer } from "../components/SfxLayer";
 
-export const ShortsVideo = ({
+export const LongformVideo = ({
   audioPath,
   visualPaths,
-  words,
+  chunks,
   sfxCues,
   accentHex,
   musicPath,
   durationInSeconds,
 }) => {
-  const durationInFrames = Math.round((durationInSeconds || 30) * 30);
+  const durationInFrames = Math.round((durationInSeconds || 600) * 30);
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000000" }}>
       <KenBurnsClip visualPaths={visualPaths} durationInFrames={durationInFrames} />
-      <KineticCaption words={words} accentHex={accentHex} />
+      <SubtitleCaption chunks={chunks} />
       <SfxLayer sfxCues={sfxCues} />
       {audioPath ? <Audio src={audioPath} /> : null}
       {musicPath ? <Audio src={musicPath} volume={0.12} loop /> : null}
