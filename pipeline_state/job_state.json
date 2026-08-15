@@ -29,6 +29,11 @@
         "step": "assembly",
         "error": "Remotion render failed:\n\u001b[31mYou passed --props but it was neither valid JSON nor a file path to a valid JSON file. Provided value: assets/shorts_20260814_113817_730da7/remotion_props.json\u001b[39m\n\u001b[31mCheck that your input is parseable using `JSON.parse` and try again.\u001b[39m\n",
         "time": "2026-08-14T19:04:32.058109+00:00"
+      },
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[31mYou passed --props but it was neither valid JSON nor a file path to a valid JSON file. Provided value: assets/shorts_20260814_113817_730da7/remotion_props.json\u001b[39m\n\u001b[31mCheck that your input is parseable using `JSON.parse` and try again.\u001b[39m\n",
+        "time": "2026-08-15T09:34:56.028659+00:00"
       }
     ],
     "assets": {
@@ -243,6 +248,6 @@
       "total_duration": 50.44
     },
     "created_at": "2026-08-14T11:38:17.847175+00:00",
-    "last_updated": "2026-08-14T19:04:32.058133+00:00"
+    "last_updated": "2026-08-15T09:34:56.028682+00:00"
   }
 }
