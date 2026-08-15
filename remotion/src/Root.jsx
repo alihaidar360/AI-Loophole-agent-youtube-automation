@@ -1,52 +1,55 @@
-import { Composition } from "remotion";
+import React from "react";
+import { Composition, registerRoot } from "remotion";
 import { ShortsVideo } from "./compositions/ShortsVideo";
 import { LongformVideo } from "./compositions/LongformVideo";
 
-// Both formats are registered as fully independent Compositions — each
-// with its own resolution, fps, and dynamic duration calculated from the
-// actual voiceover length passed in via props (see calculateMetadata).
-// Default props below are just placeholders for the Remotion Studio
-// preview; the real pipeline always passes --props=<path-to-json>.
+const FPS = 30;
 
-const emptyTimeline = { words: [], chunks: [], visuals: [], sfxCues: [], accentHex: "#00E5FF" };
+const defaultProps = {
+  audioPath: "",
+  visualPaths: [],
+  words: [],
+  chunks: [],
+  sfxCues: [],
+  accentHex: "#00E5FF",
+  musicPath: null,
+  durationInSeconds: 30,
+};
 
-export const Root = () => {
+// Video length varies per job (depends on voiceover length), so duration
+// is calculated at render time from the durationInSeconds prop.
+const calculateMetadata = ({ props }) => {
+  const duration = props.durationInSeconds || 30;
+  return {
+    durationInFrames: Math.max(Math.round(duration * FPS), FPS),
+  };
+};
+
+const RemotionRoot = () => {
   return (
     <>
       <Composition
         id="ShortsVideo"
         component={ShortsVideo}
-        durationInFrames={30 * 45}
-        fps={30}
+        durationInFrames={900}
+        fps={FPS}
         width={1080}
         height={1920}
-        defaultProps={{
-          audioSrc: "",
-          musicSrc: "",
-          durationInSeconds: 45,
-          timeline: emptyTimeline,
-        }}
-        calculateMetadata={({ props }) => ({
-          durationInFrames: Math.ceil((props.durationInSeconds || 45) * 30),
-        })}
+        defaultProps={defaultProps}
+        calculateMetadata={calculateMetadata}
       />
       <Composition
         id="LongformVideo"
         component={LongformVideo}
-        durationInFrames={30 * 720}
-        fps={30}
+        durationInFrames={18000}
+        fps={FPS}
         width={1920}
         height={1080}
-        defaultProps={{
-          audioSrc: "",
-          musicSrc: "",
-          durationInSeconds: 720,
-          timeline: emptyTimeline,
-        }}
-        calculateMetadata={({ props }) => ({
-          durationInFrames: Math.ceil((props.durationInSeconds || 720) * 30),
-        })}
+        defaultProps={defaultProps}
+        calculateMetadata={calculateMetadata}
       />
     </>
   );
 };
+
+registerRoot(RemotionRoot);
