@@ -9,7 +9,6 @@ final MP4. Remotion itself lives in /remotion (Node.js/React project).
 import json
 import os
 import subprocess
-from config import Config
 
 
 def assemble_video(video_type: str, audio_path: str, visual_paths: list,
@@ -36,14 +35,14 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     props_path = os.path.abspath(
-         os.path.join(os.path.dirname(output_path), "remotion_props.json")
-     )
+        os.path.join(os.path.dirname(output_path), "remotion_props.json")
+    )
     with open(props_path, "w") as f:
         json.dump(props, f)
 
     cmd = [
         "npx", "remotion", "render",
-        "src/index.jsx",
+        "src/Root.jsx",
         composition_id,
         os.path.abspath(output_path),
         f"--props={props_path}",
@@ -52,7 +51,7 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
     ]
 
     result = subprocess.run(
-        cmd, cwd=Config.REMOTION_DIR, capture_output=True, text=True, timeout=1800
+        cmd, cwd="remotion", capture_output=True, text=True, timeout=1800
     )
     if result.returncode != 0:
         raise RuntimeError(f"Remotion render failed:\n{result.stderr[-3000:]}")
