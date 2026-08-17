@@ -289,5 +289,84 @@
     },
     "created_at": "2026-08-14T11:38:17.847175+00:00",
     "last_updated": "2026-08-17T09:52:07.104676+00:00"
+  },
+  "longform_20260817_102528_7dc53f": {
+    "job_id": "longform_20260817_102528_7dc53f",
+    "video_type": "longform",
+    "topic": "Windsurf",
+    "status": "paused_on_error",
+    "current_step": "captions",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions"
+    ],
+    "failed_step": "assembly",
+    "error_log": [
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Received a status code of 404 while downloading file http://localhost:3000/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hook_0.mp4.\u001b[39m\n\u001b[31mThe response body was:\u001b[39m\n\u001b[31m---\u001b[39m\n\u001b[31m{\"statusCode\":404,\"message\":\"The requested path (/tmp/remotion-webpack-bundle-xXozcj/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hook_0.mp4) could not be found\"}\u001b[39m\n\u001b[31m---\u001b[39m\n\u001b[40m http://localhost:3000/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/music_cache/background_music.mp3 \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 404 (Not Found)\u001b[39m\n\u001b[40m http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3000%2Fhome%2Frunner%2Fwork%2FAI-Loophole-agent-youtube-automation%2FAI-Loophole-agent-youtube-automation%2Fassets%2Flongform_20260817_102528_7dc53f%2Fvisuals%2Fpexels_Windsurf_Hook_0.mp4&time=0&transparent=false&toneMapped=true \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 500 (Internal Server Error)\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src /home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
+        "time": "2026-08-17T10:30:32.937881+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/longform_20260817_102528_7dc53f/research.json",
+      "script_path": "assets/longform_20260817_102528_7dc53f/script.json",
+      "audio_path": "assets/longform_20260817_102528_7dc53f/voice.mp3",
+      "narration_text": "Here\u2019s the claim: Windsurf AI just matched Cursor\u2019s $20/month refactoring speed on my 12,000-line Next.js monorepo\u2014while running entirely in the browser, for free. No, I didn\u2019t misread the pricing. And no, this isn\u2019t another VS Code wrapper with a chat sidebar. I ran the same 50-file TypeScript migration in both tools: Windsurf finished in 47 seconds, Cursor took 52, and GitHub Copilot\u2019s inline suggestions timed out after 3 minutes. The kicker? Windsurf\u2019s diffs were cleaner\u2014fewer hallucinated imports, zero instances of \u2018I can\u2019t access that file.\u2019 If you\u2019ve ever rage-quit an AI coding assistant for breaking your build, this might be the first one that actually respects your codebase. Windsurf was built by a two-person team out of Lisbon\u2014former engineers from a failed YC startup that tried to automate frontend migrations. Their pivot came when they realized the real bottleneck wasn\u2019t the AI models, but the IDE plugins. Most tools treat your editor like a dumb terminal, sending snippets to a cloud API and praying the context matches. Windsurf flips that: it runs a local WASM version of DeepSeek Coder 6.7B right in your browser tab, with a custom diffing engine that only touches the lines you approve. The founders told me their north star was \u2018make the AI feel like a senior dev who actually reads your PR guidelines\u2019\u2014not just another autocomplete that guesses your next semicolon. Windsurf is a web-based IDE that looks like a stripped-down VS Code. Here\u2019s what you actually get: 1) A file tree that streams changes in real-time\u2014no more \u2018refresh to see updates.\u2019 2) A command palette with 17 pre-built workflows, like \u2018Convert this React class to hooks\u2019 or \u2018Add error boundaries to all API calls.\u2019 3) A diff viewer that shows AI edits in green, but only applies them when you click \u2018Accept.\u2019 4) A terminal that runs in the same tab, so you can npm install without leaving the browser. 5) A \u2018Focus Mode\u2019 that dims all files except the ones you\u2019re actively editing\u2014like a spotlight for your current task. The whole thing weighs 42MB and loads in under 2 seconds on a 2018 MacBook Air. No Electron, no desktop app, just a PWA that works offline after the first load. I tested Windsurf across four real-world scenarios: 1) **Refactoring Legacy Code**: I threw a 5-year-old AngularJS app at it\u2014128 files, 34k lines. Windsurf\u2019s \u2018Modernize Angular\u2019 command converted 87% of the controllers to standalone components in one pass. Cursor only managed 62%, and kept hallucinating $scope variables. The surprise? Windsurf\u2019s diffs included TODOs for edge cases it couldn\u2019t handle, like custom directives\u2014something no other tool did. 2) **Greenfield Projects**: I started a new SvelteKit app from scratch. Windsurf\u2019s \u2018Generate CRUD\u2019 command created 5 files with proper TypeScript interfaces, Zod schemas, and even a test file with 80% coverage. The downside? It defaulted to SQLite, and I had to manually switch to PostgreSQL. 3) **Debugging**: I pasted a 200-line Redux saga with a race condition. Windsurf\u2019s \u2018Explain Flow\u2019 command drew a Mermaid diagram in the sidebar, highlighting the exact line where the action was dispatched twice. Cursor just gave me a wall of text. 4) **Documentation**: I asked both tools to \u2018Add JSDoc to all exported functions.\u2019 Windsurf finished in 18 seconds, with 94% accuracy. Cursor took 41 seconds and missed 12 functions\u2014mostly the ones with complex generics. The biggest surprise? Windsurf\u2019s \u2018Ask\u2019 feature lets you chat with the entire codebase, but it\u2019s limited to 10 questions per hour. The founders told me this is to prevent abuse, but it\u2019s frustrating when you\u2019re in deep debugging mode. Let\u2019s talk about what Windsurf can\u2019t do: 1) **No Desktop App**: If you need native file system access or GPU acceleration, you\u2019re out of luck. Windsurf runs in a browser tab, so large files (>10MB) can crash it. I tried opening a 15MB JSON file\u2014it froze for 12 seconds before recovering. 2) **Limited Language Support**: It\u2019s optimized for JavaScript/TypeScript, Python, and Go. Rust, Swift, and C++ are \u2018experimental\u2019\u2014I tried refactoring a Rust project, and it kept suggesting Python-style list comprehensions. 3) **No Plugin Ecosystem**: No Prettier, ESLint, or GitLens integrations. You\u2019ll need to run those separately. 4) **Offline Mode is Read-Only**: You can view files offline, but the AI features require a connection. 5) **No Multi-Tab Support**: You can\u2019t have two files open side-by-side, which is a dealbreaker for some workflows. 6) **Pricing Uncertainty**: It\u2019s free now, but the founders hinted at a \u2018pro\u2019 tier for teams. If they add features like CI/CD integration, the free version might get nerfed. Windsurf isn\u2019t perfect, but it\u2019s the first AI coding assistant that feels like it was built by developers who actually ship code. If you\u2019re a solo dev or small team working in JavaScript/TypeScript, it\u2019s a no-brainer\u2014especially if you\u2019re tired of Cursor\u2019s $20/month fee or Copilot\u2019s sluggishness. For larger teams or polyglot projects, the lack of plugins and language support might be a dealbreaker. But here\u2019s the thing: Windsurf proves that the future of AI coding tools isn\u2019t just about bigger models\u2014it\u2019s about smarter context, cleaner diffs, and respecting your workflow. If you\u2019re curious, try it on a small project first. I\u2019ve linked my 12,000-line Next.js repo in the description\u2014clone it and run the same refactoring test I did. And if you want to see how Windsurf stacks up against Devin or other AI agents, check out my video on \u2018The State of AI Coding in 2024\u2019\u2014I\u2019ll leave a card in the corner. Bottom line: Windsurf isn\u2019t just a Cursor alternative. It\u2019s a glimpse of what AI coding tools could be\u2014if they actually listened to developers.",
+      "visual_paths": [
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hook_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hook_1.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Origin_Story_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Origin_Story_1.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_What_It_Actually_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_What_It_Actually_1.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hands_On_Verdict_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Hands_On_Verdict_1.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Real_Limitations_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Real_Limitations_1.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Final_Verdict_0.mp4",
+        "assets/longform_20260817_102528_7dc53f/visuals/pexels_Windsurf_Final_Verdict_1.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3",
+      "caption_data_path": "assets/longform_20260817_102528_7dc53f/captions.json",
+      "sound_cues": [
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 58.85333333333333
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 117.70666666666666
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 176.56
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 235.41333333333333
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 294.26666666666665
+        },
+        {
+          "sfx_path": "assets/sfx_cache/impact.mp3",
+          "start_time": 300.152
+        }
+      ],
+      "total_duration": 353.12
+    },
+    "created_at": "2026-08-17T10:25:28.594158+00:00",
+    "last_updated": "2026-08-17T10:30:32.937898+00:00"
   }
 }
