@@ -1,5 +1,5 @@
 import React from "react";
-import { Audio, Sequence, useVideoConfig } from "remotion";
+import { Audio, Sequence, staticFile, useVideoConfig } from "remotion";
 
 export const SfxLayer = ({ sfxCues }) => {
   const { fps, durationInFrames } = useVideoConfig();
@@ -12,7 +12,7 @@ export const SfxLayer = ({ sfxCues }) => {
         if (from >= durationInFrames) return null;
         return (
           <Sequence key={i} from={from} durationInFrames={Math.min(fps * 2, durationInFrames - from)}>
-            <Audio src={cue.path} volume={0.7} />
+            <Audio src={staticFile(cue.path)} volume={0.7} />
           </Sequence>
         );
       })}

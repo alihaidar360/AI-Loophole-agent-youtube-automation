@@ -1,5 +1,5 @@
 import React from "react";
-import { OffthreadVideo, Img, Sequence, useCurrentFrame, interpolate } from "remotion";
+import { OffthreadVideo, Img, Sequence, staticFile, useCurrentFrame, interpolate } from "remotion";
 
 const isImage = (path) => /\.(png|jpg|jpeg|webp)$/i.test(path || "");
 
@@ -13,7 +13,9 @@ const SingleClip = ({ path, durationInFrames }) => {
   const style = { width: "100%", height: "100%", objectFit: "cover", transform: `scale(${scale})` };
 
   if (!path) return null;
-  return isImage(path) ? <Img src={path} style={style} /> : <OffthreadVideo src={path} style={style} muted />;
+  const src = staticFile(path); // path is relative to assets/, served via --public-dir
+
+  return isImage(path) ? <Img src={src} style={style} /> : <OffthreadVideo src={src} style={style} muted />;
 };
 
 // Splits the full video duration evenly across all provided visual clips,
