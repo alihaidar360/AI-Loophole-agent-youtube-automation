@@ -33,18 +33,32 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
     composition_id = "ShortsVideo" if video_type == "shorts" else "LongformVideo"
     canvas = (1080, 1920) if video_type == "shorts" else (1920, 1080)
 
+    if not audio_path or not os.path.exists(audio_path):
+        raise RuntimeError(f"Voiceover file missing on disk (stale cache?): {audio_path}")
+
+    safe_visual_paths = [p for p in (visual_paths or []) if p and os.path.exists(p)]
+    if not safe_visual_paths:
+        raise RuntimeError("No visual files exist on disk (stale cache?) — cannot assemble video")
+
+    # Defensive check: a path recorded in job_state.json doesn't guarantee
+    # the actual binary still exists on disk (GitHub Actions cache can be
+    # evicted/stale across a job resumed over multiple days/runs). Better
+    # to silently skip music/SFX than crash the whole video over it.
+    safe_music_path = music_path if music_path and os.path.exists(music_path) else None
+
     props = {
         "audioPath": _rel_to_assets(audio_path),
-        "visualPaths": [_rel_to_assets(p) for p in visual_paths],
+        "visualPaths": [_rel_to_assets(p) for p in safe_visual_paths],
         "words": caption_data.get("words", []),
         "chunks": caption_data.get("chunks", []),
         # sound_design.py produces cues shaped like {"sfx_path": ..., "start_time": ...}
         "sfxCues": [
             {"path": _rel_to_assets(c["sfx_path"]), "startTime": c["start_time"]}
-            for c in (sfx_cues or []) if c.get("sfx_path")
+            for c in (sfx_cues or [])
+            if c.get("sfx_path") and os.path.exists(c["sfx_path"])
         ],
         "accentHex": accent_hex,
-        "musicPath": _rel_to_assets(music_path) if music_path else None,
+        "musicPath": _rel_to_assets(safe_music_path) if safe_music_path else None,
         "durationInSeconds": total_duration,
     }
 
