@@ -1,1 +1,218 @@
-{}
+{
+  "shorts_20260818_080552_3a1507": {
+    "job_id": "shorts_20260818_080552_3a1507",
+    "video_type": "shorts",
+    "topic": "Tome AI",
+    "status": "paused_on_error",
+    "current_step": "captions",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions"
+    ],
+    "failed_step": "assembly",
+    "error_log": [
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[40m http://localhost:3000/music_cache/background_music.mp3 \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 404 (Not Found)\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
+        "time": "2026-08-18T08:07:11.387819+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260818_080552_3a1507/research.json",
+      "script_path": "assets/shorts_20260818_080552_3a1507/script.json",
+      "audio_path": "assets/shorts_20260818_080552_3a1507/voice.mp3",
+      "narration_text": "I built a 10-slide deck in 60 seconds with Tome AI\u2014no design skills, no templates. But before you ditch PowerPoint forever\u2026 watch this. 1\ufe0f\u20e3 **Zero Design Skills Needed**: Type a prompt, get polished slides with AI-generated visuals. 2\ufe0f\u20e3 **Free Tier Actually Works**: Unlike most \u2018free\u2019 tools, Tome\u2019s basic plan lets you export without watermarks. 3\ufe0f\u20e3 **The Catch**: Offline mode? Forget it. No internet = no slides. And customization? Limited compared to PowerPoint\u2019s 30 years of features. Try Tome AI free (link below) and tell me\u2014does this replace PowerPoint for you? Also, check out our video on AI tools that *actually* save time for more like this!",
+      "visual_paths": [
+        "assets/shorts_20260818_080552_3a1507/visuals/pexels_Tome_AI_technology_0.mp4",
+        "assets/shorts_20260818_080552_3a1507/visuals/pexels_Tome_AI_technology_1.mp4",
+        "assets/shorts_20260818_080552_3a1507/visuals/pexels_Tome_AI_technology_2.mp4",
+        "assets/shorts_20260818_080552_3a1507/visuals/pexels_Tome_AI_technology_3.mp4",
+        "assets/shorts_20260818_080552_3a1507/visuals/pexels_Tome_AI_technology_4.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3",
+      "caption_data_path": "assets/shorts_20260818_080552_3a1507/captions.json",
+      "sound_cues": [
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.48
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 1.26
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 2.3
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 3.22
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 4.6
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 5.62
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 6.36
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 7.74
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 9.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 10.4
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 11.88
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 13.28
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 14.52
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 15.66
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 16.88
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 18.26
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 18.98
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 20.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 21.76
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 23.18
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 23.9
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 25.38
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 26.62
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 27.76
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 29.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 29.96
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 31.16
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 32.44
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 33.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 34.92
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 35.94
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 36.9
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 37.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 38.4
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 39.56
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 40.46
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 41.2
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 42.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 43.26
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 44.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 45.44
+        }
+      ],
+      "total_duration": 45.92
+    },
+    "created_at": "2026-08-18T08:05:52.750443+00:00",
+    "last_updated": "2026-08-18T08:07:11.387837+00:00"
+  }
+}
