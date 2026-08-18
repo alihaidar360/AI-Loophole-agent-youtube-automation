@@ -4,11 +4,27 @@ Stage 6: Video Assembly Engine — Remotion bridge.
 Builds a JSON props file describing the video's timeline (b-roll, audio,
 captions, SFX cues, colors) and invokes Remotion's CLI to render the
 final MP4. Remotion itself lives in /remotion (Node.js/React project).
+
+IMPORTANT: Remotion's renderer refuses file:// URLs for security reasons
+("Not allowed to load local resource"). The supported way to serve
+dynamically-generated local assets is Remotion's own static file server:
+pass --public-dir pointing at the assets/ folder, then give the JS side
+PATHS RELATIVE TO THAT FOLDER — the React components wrap them with
+Remotion's staticFile() helper, which resolves them through Remotion's
+own local server correctly.
 """
 
 import json
 import os
 import subprocess
+
+ASSETS_ROOT = os.path.abspath("assets")
+
+
+def _rel_to_assets(p: str) -> str:
+    """Converts an absolute (or relative) local path into a path relative
+    to assets/ — this is what staticFile() on the JS side expects."""
+    return os.path.relpath(os.path.abspath(p), ASSETS_ROOT)
 
 
 def assemble_video(video_type: str, audio_path: str, visual_paths: list,
@@ -17,25 +33,18 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
     composition_id = "ShortsVideo" if video_type == "shorts" else "LongformVideo"
     canvas = (1080, 1920) if video_type == "shorts" else (1920, 1080)
 
-    def _file_url(p):
-        """Remotion's renderer needs local (non-public/) assets prefixed
-        with file:// — a bare absolute path gets misread as a URL path on
-        its internal server, causing 404s."""
-        return f"file://{os.path.abspath(p)}"
-
     props = {
-        "audioPath": _file_url(audio_path),
-        "visualPaths": [_file_url(p) for p in visual_paths],
+        "audioPath": _rel_to_assets(audio_path),
+        "visualPaths": [_rel_to_assets(p) for p in visual_paths],
         "words": caption_data.get("words", []),
         "chunks": caption_data.get("chunks", []),
         # sound_design.py produces cues shaped like {"sfx_path": ..., "start_time": ...}
-        # — read those exact keys here, output camelCase for the JS side.
         "sfxCues": [
-            {"path": _file_url(c["sfx_path"]), "startTime": c["start_time"]}
+            {"path": _rel_to_assets(c["sfx_path"]), "startTime": c["start_time"]}
             for c in (sfx_cues or []) if c.get("sfx_path")
         ],
         "accentHex": accent_hex,
-        "musicPath": _file_url(music_path) if music_path else None,
+        "musicPath": _rel_to_assets(music_path) if music_path else None,
         "durationInSeconds": total_duration,
     }
 
@@ -54,6 +63,7 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
         f"--props={props_path}",
         f"--width={canvas[0]}",
         f"--height={canvas[1]}",
+        f"--public-dir={ASSETS_ROOT}",
     ]
 
     result = subprocess.run(
