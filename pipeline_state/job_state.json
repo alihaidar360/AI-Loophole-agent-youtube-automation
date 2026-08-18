@@ -89,6 +89,11 @@
         "step": "assembly",
         "error": "Remotion render failed:\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Can only download URLs starting with http:// or https://, got \"file:///home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/shorts_20260814_113817_730da7/visuals/pexels_Claude_AI_technology_0.mp4\"\u001b[39m\n\u001b[40m console.error \u001b[49m \u001b[31mNot allowed to load local resource: file:///home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/music_cache/background_music.mp3\u001b[39m\n\u001b[40m console.error \u001b[49m \u001b[31mNot allowed to load local resource: file:///home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/music_cache/background_music.mp3\u001b[39m\n\u001b[40m http://localhost:3000/proxy?src=file%3A%2F%2F%2Fhome%2Frunner%2Fwork%2FAI-Loophole-agent-youtube-automation%2FAI-Loophole-agent-youtube-automation%2Fassets%2Fshorts_20260814_113817_730da7%2Fvisuals%2Fpexels_Claude_AI_technology_0.mp4&time=0&transparent=false&toneMapped=true \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 500 (Internal Server Error)\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src file:///home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
         "time": "2026-08-18T06:15:45.332521+00:00"
+      },
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[40m http://localhost:3000/music_cache/background_music.mp3 \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 404 (Not Found)\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
+        "time": "2026-08-18T06:30:06.339441+00:00"
       }
     ],
     "assets": {
@@ -303,7 +308,7 @@
       "total_duration": 50.44
     },
     "created_at": "2026-08-14T11:38:17.847175+00:00",
-    "last_updated": "2026-08-18T06:15:45.332539+00:00"
+    "last_updated": "2026-08-18T06:30:06.339463+00:00"
   },
   "longform_20260817_102528_7dc53f": {
     "job_id": "longform_20260817_102528_7dc53f",
