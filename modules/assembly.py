@@ -17,19 +17,25 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
     composition_id = "ShortsVideo" if video_type == "shorts" else "LongformVideo"
     canvas = (1080, 1920) if video_type == "shorts" else (1920, 1080)
 
+    def _file_url(p):
+        """Remotion's renderer needs local (non-public/) assets prefixed
+        with file:// — a bare absolute path gets misread as a URL path on
+        its internal server, causing 404s."""
+        return f"file://{os.path.abspath(p)}"
+
     props = {
-        "audioPath": os.path.abspath(audio_path),
-        "visualPaths": [os.path.abspath(p) for p in visual_paths],
+        "audioPath": _file_url(audio_path),
+        "visualPaths": [_file_url(p) for p in visual_paths],
         "words": caption_data.get("words", []),
         "chunks": caption_data.get("chunks", []),
         # sound_design.py produces cues shaped like {"sfx_path": ..., "start_time": ...}
         # — read those exact keys here, output camelCase for the JS side.
         "sfxCues": [
-            {"path": os.path.abspath(c["sfx_path"]), "startTime": c["start_time"]}
+            {"path": _file_url(c["sfx_path"]), "startTime": c["start_time"]}
             for c in (sfx_cues or []) if c.get("sfx_path")
         ],
         "accentHex": accent_hex,
-        "musicPath": os.path.abspath(music_path) if music_path else None,
+        "musicPath": _file_url(music_path) if music_path else None,
         "durationInSeconds": total_duration,
     }
 
