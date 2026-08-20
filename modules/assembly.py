@@ -6,25 +6,7 @@ captions, SFX cues, colors) and invokes Remotion's CLI to render the
 final MP4. Remotion itself lives in /remotion (Node.js/React project).
 
 IMPORTANT: Remotion's renderer refuses file:// URLs for security reasons
-("Not allowed to load local resource"). The supported way to serve
-dynamically-generated local assets is Remotion's own static file server:
-pass --public-dir pointing at the assets/ folder, then give the JS side
-PATHS RELATIVE TO THAT FOLDER — the React components wrap them with
-Remotion's staticFile() helper, which resolves them through Remotion's
-own local server correctly.
-"""
-
-import json
-import os
-import subprocess
-
-ASSETS_ROOT = os.path.abspath("assets")
-
-
-def _rel_to_assets(p: str) -> str:
-    """Converts an absolute (or relative) local path into a path relative
-    to assets/ — this is what staticFile() on the JS side expects."""
-    return os.path.relpath(os.path.abspath(p), ASSETS_ROOT)
+("Not allowed to load local )
 
 
 def assemble_video(video_type: str, audio_path: str, visual_paths: list,
