@@ -234,5 +234,84 @@
     },
     "created_at": "2026-08-18T08:05:52.750443+00:00",
     "last_updated": "2026-08-20T09:43:11.352809+00:00"
+  },
+  "longform_20260820_102452_f2b44d": {
+    "job_id": "longform_20260820_102452_f2b44d",
+    "video_type": "longform",
+    "topic": "Perplexity AI",
+    "status": "paused_on_error",
+    "current_step": "captions",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions"
+    ],
+    "failed_step": "assembly",
+    "error_log": [
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[31mError: Error while downloading http://localhost:3000/longform_20260820_102452_f2b44d/voice.mp3: Error: Received a status code of 404 while downloading file http://localhost:3000/longform_20260820_102452_f2b44d/voice.mp3.\u001b[39m\n\u001b[31mThe response body was:\u001b[39m\n\u001b[31m---\u001b[39m\n\u001b[31m{\"statusCode\":404,\"message\":\"The requested path (/tmp/remotion-webpack-bundle-kEnMkz/longform_20260820_102452_f2b44d/voice.mp3) could not be found\"}\u001b[39m\n\u001b[31m---\u001b[39m\n\u001b[31m    at readFile (/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/remotion/node_modules/@remotion/renderer/dist/assets/read-file.js:59:15)\u001b[39m\n\u001b[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\u001b[39m\n\u001b[31m    at /home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/remotion/node_modules/@remotion/renderer/dist/render-frame-with-option-to-reject.js:137:21\u001b[39m\n\u001b[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\u001b[39m\n",
+        "time": "2026-08-20T10:27:39.513716+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/longform_20260820_102452_f2b44d/research.json",
+      "script_path": "assets/longform_20260820_102452_f2b44d/script.json",
+      "audio_path": "assets/longform_20260820_102452_f2b44d/voice.mp3",
+      "narration_text": "Last week I ran the same research task through Perplexity Pro, ChatGPT-4o, and Claude 3.5 Sonnet. Perplexity didn\u2019t just finish 3x faster\u2014it surfaced three academic papers the others missed, all published in the last 48 hours. That\u2019s not a fluency edge; that\u2019s a real-time data moat. And here\u2019s the kicker: the feature that made the difference isn\u2019t even the one they advertise. Perplexity was built by a team of ex-Google, Meta, and Quora engineers who were frustrated by the same problem: search engines give you links, not answers. They launched in 2022 with a simple premise\u2014what if an AI could synthesize information from the web in real time, with citations, and do it faster than you can open a new tab? The company is now valued at over $1 billion, backed by Jeff Bezos and Nvidia, and they\u2019re not just competing with Google\u2014they\u2019re gunning for the entire $300 billion search market. Perplexity is a conversational search engine. You ask a question, and it returns a concise answer with footnotes to sources. But here\u2019s the breakdown of what\u2019s under the hood: 1) Real-time web indexing\u2014it crawls the live web, not just pre-2023 data like most LLMs. 2) Focus mode\u2014you can toggle between academic papers, Reddit threads, or YouTube transcripts. 3) Threads\u2014like a chat history, but with every response linked to its sources. 4) Pro version ($20/month) unlocks GPT-4o, Claude 3.5, and their own experimental model, which they claim outperforms both on niche queries. It\u2019s available as a web app, iOS app, and Chrome extension. I tested Perplexity across four specific use-cases: 1) **Academic research**: For my recent video on AI ethics, Perplexity Pro found 7 peer-reviewed papers from 2024 that Google Scholar didn\u2019t surface. The catch? It sometimes misinterprets methodology\u2014you still need to read the papers. 2) **Product research**: When I was comparing noise-canceling headphones, Perplexity pulled real-time pricing from 12 retailers and summarized Reddit threads on durability. But it missed some niche forums, like Head-Fi. 3) **Coding help**: It\u2019s great for explaining error messages with up-to-date Stack Overflow threads. But for complex debugging, GitHub Copilot still wins\u2014Perplexity\u2019s code snippets are hit or miss. 4) **Travel planning**: It generated a 3-day itinerary for Kyoto with restaurant reservations and train times. The surprise? It included a warning about a local festival that would\u2019ve made hotels 3x more expensive\u2014something Google Travel missed. The biggest letdown? **Creative writing**. Perplexity\u2019s answers are too sterile for storytelling. It\u2019s a researcher, not a muse. 1) **Paywall blindness**: Perplexity can\u2019t access paywalled content, so if the answer is behind a Nature or IEEE subscription, it\u2019ll either miss it or hallucinate. 2) **Citation overload**: For broad questions like \u2018What is quantum computing?\u2019, it\u2019ll dump 20 sources on you\u2014overwhelming, not helpful. 3) **No image generation**: Unlike ChatGPT, you can\u2019t ask it to create a diagram or edit a photo. 4) **Privacy trade-offs**: Your queries are logged for 30 days, even on Pro. If you\u2019re researching sensitive topics, this is a dealbreaker. 5) **Mobile app quirks**: The iOS app crashes if you paste a long query, and the voice search is glitchy\u2014it cut me off mid-sentence twice. Perplexity isn\u2019t replacing Google or ChatGPT\u2014it\u2019s carving out a new category. If you\u2019re a student, journalist, or professional who needs to synthesize information fast, the Pro version is worth the $20/month. For everyone else, the free tier is still a powerful tool, but with limitations. The real magic isn\u2019t the answers; it\u2019s the **real-time sourcing**. That\u2019s the feature ChatGPT can\u2019t match, and it\u2019s why Perplexity is the only AI tool I\u2019ve paid for this year. If you\u2019re curious about how it stacks up against other AI tools, I did a deep dive on [cross_promotion]\u2014check it out for the full comparison.",
+      "visual_paths": [
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Hook_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Hook_1.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Origin_Story_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Origin_Story_1.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_What_It_Actually_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_What_It_Actually_1.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Hands_on_Verdict_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Hands_on_Verdict_1.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Real_Limitations_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Real_Limitations_1.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Final_Verdict_0.mp4",
+        "assets/longform_20260820_102452_f2b44d/visuals/pexels_Perplexity_AI_Final_Verdict_1.mp4"
+      ],
+      "accent_hex": "#FF2EC4",
+      "music_path": null,
+      "caption_data_path": "assets/longform_20260820_102452_f2b44d/captions.json",
+      "sound_cues": [
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 41.60333333333333
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 83.20666666666666
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 124.81
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 166.41333333333333
+        },
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 208.01666666666665
+        },
+        {
+          "sfx_path": "assets/sfx_cache/impact.mp3",
+          "start_time": 212.177
+        }
+      ],
+      "total_duration": 249.62
+    },
+    "created_at": "2026-08-20T10:24:52.475428+00:00",
+    "last_updated": "2026-08-20T10:27:39.513735+00:00"
   }
 }
