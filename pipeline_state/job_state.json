@@ -49,6 +49,11 @@
         "step": "assembly",
         "error": "Remotion render failed:\n\u001b[40m http://localhost:3000/music_cache/background_music.mp3 \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 404 (Not Found)\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
         "time": "2026-08-21T00:46:22.326439+00:00"
+      },
+      {
+        "step": "assembly",
+        "error": "Remotion render failed:\n\u001b[40m http://localhost:3000/music_cache/background_music.mp3 \u001b[49m \u001b[31mFailed to load resource: the server responded with a status of 404 (Not Found)\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31mCould not extract frame from compositor\u001b[39m \u001b[31mError: Request closed\u001b[39m\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31mCould not play audio with src music_cache/background_music.mp3: [object MediaError]. See https://remotion.dev/docs/media-playback-error for help.\u001b[39m\n",
+        "time": "2026-08-21T09:45:48.703960+00:00"
       }
     ],
     "assets": {
@@ -243,7 +248,7 @@
       "total_duration": 45.92
     },
     "created_at": "2026-08-18T08:05:52.750443+00:00",
-    "last_updated": "2026-08-21T00:46:22.326457+00:00"
+    "last_updated": "2026-08-21T09:45:48.703981+00:00"
   },
   "longform_20260820_102452_f2b44d": {
     "job_id": "longform_20260820_102452_f2b44d",
