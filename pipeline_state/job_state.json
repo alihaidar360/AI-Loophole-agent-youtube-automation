@@ -1,1 +1,24 @@
-{}
+{
+  "shorts_20260829_151758_ca39fc": {
+    "job_id": "shorts_20260829_151758_ca39fc",
+    "video_type": "shorts",
+    "topic": "Midjourney",
+    "status": "paused_on_error",
+    "completed_steps": [
+      "research"
+    ],
+    "failed_step": "script",
+    "error_log": [
+      {
+        "step": "script",
+        "error": "All providers failed. Details: {'groq_gpt-oss-120b': \"Error code: 404 - {'error': {'message': 'The model `gpt-oss-120b` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}\", 'mistral_large': '403 Client Error: Forbidden for url: https://api.mistral.ai/v1/chat/completions', 'groq_llama3.3_70b': \"Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}\"}",
+        "time": "2026-08-29T15:18:15.406528+00:00"
+      }
+    ],
+    "assets": {
+      "research_path": "assets/shorts_20260829_151758_ca39fc/research.json"
+    },
+    "created_at": "2026-08-29T15:17:58.424762+00:00",
+    "last_updated": "2026-08-29T15:18:15.406542+00:00"
+  }
+}
