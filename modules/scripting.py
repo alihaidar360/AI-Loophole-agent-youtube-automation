@@ -132,7 +132,7 @@ def _mistral_call(system_prompt: str, user_prompt: str, model: str) -> dict:
 def _longform_groq_gptoss(research, cross_promo=None, performance_insights=None) -> dict:
     return _groq_call(LONGFORM_SYSTEM_PROMPT,
                        _build_user_prompt(research, cross_promo, performance_insights),
-                       "gpt-oss-120b")
+                       "openai/gpt-oss-120b")
 
 
 def _longform_mistral_large(research, cross_promo=None, performance_insights=None) -> dict:
@@ -144,13 +144,13 @@ def _longform_mistral_large(research, cross_promo=None, performance_insights=Non
 def _longform_groq_llama(research, cross_promo=None, performance_insights=None) -> dict:
     return _groq_call(LONGFORM_SYSTEM_PROMPT,
                        _build_user_prompt(research, cross_promo, performance_insights),
-                       "llama-3.3-70b-versatile")
+                       "openai/gpt-oss-20b")
 
 
 def _shorts_groq_gptoss(research, cross_promo=None, performance_insights=None) -> dict:
     return _groq_call(SHORTS_SYSTEM_PROMPT,
                        _build_user_prompt(research, cross_promo, performance_insights),
-                       "gpt-oss-120b")
+                       "openai/gpt-oss-120b")
 
 
 def _shorts_mistral_large(research, cross_promo=None, performance_insights=None) -> dict:
@@ -162,13 +162,13 @@ def _shorts_mistral_large(research, cross_promo=None, performance_insights=None)
 def _shorts_groq_llama(research, cross_promo=None, performance_insights=None) -> dict:
     return _groq_call(SHORTS_SYSTEM_PROMPT,
                        _build_user_prompt(research, cross_promo, performance_insights),
-                       "llama-3.3-70b-versatile")
+                       "openai/gpt-oss-20b")
 
 
 def _critic_pass(script: dict, research: dict) -> dict:
     try:
         prompt = json.dumps({"draft_script": script, "tool_name": research.get("tool_name", "")})
-        result = _groq_call(CRITIC_SYSTEM_PROMPT, prompt, "gpt-oss-120b")
+        result = _groq_call(CRITIC_SYSTEM_PROMPT, prompt, "openai/gpt-oss-120b")
         revised = result.get("revised_script")
         if revised and ("chapters" in revised or "hook" in revised):
             revised["_provider_used"] = script.get("_provider_used")
@@ -183,9 +183,9 @@ def _critic_pass(script: dict, research: dict) -> dict:
 def generate_longform_script(research: dict, cross_promo: dict = None,
                               performance_insights: dict = None) -> dict:
     providers = [
-        ("groq_gpt-oss-120b", _longform_groq_gptoss),
+        ("groq_openai_gpt-oss-120b", _longform_groq_gptoss),
         ("mistral_large", _longform_mistral_large),
-        ("groq_llama3.3_70b", _longform_groq_llama),
+        ("groq_openai_gpt-oss-20b", _longform_groq_llama),
     ]
     script, provider_used = run_with_fallback(providers, research, cross_promo, performance_insights)
     script["_provider_used"] = provider_used
@@ -196,9 +196,9 @@ def generate_longform_script(research: dict, cross_promo: dict = None,
 def generate_shorts_script(research: dict, cross_promo: dict = None,
                             performance_insights: dict = None) -> dict:
     providers = [
-        ("groq_gpt-oss-120b", _shorts_groq_gptoss),
+        ("groq_openai_gpt-oss-120b", _shorts_groq_gptoss),
         ("mistral_large", _shorts_mistral_large),
-        ("groq_llama3.3_70b", _shorts_groq_llama),
+        ("groq_openai_gpt-oss-20b", _shorts_groq_llama),
     ]
     script, provider_used = run_with_fallback(providers, research, cross_promo, performance_insights)
     script["_provider_used"] = provider_used
