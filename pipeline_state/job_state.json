@@ -5,20 +5,372 @@
     "topic": "Midjourney",
     "status": "paused_on_error",
     "completed_steps": [
-      "research"
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly"
     ],
-    "failed_step": "script",
+    "failed_step": "upload",
     "error_log": [
       {
         "step": "script",
         "error": "All providers failed. Details: {'groq_gpt-oss-120b': \"Error code: 404 - {'error': {'message': 'The model `gpt-oss-120b` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}\", 'mistral_large': '403 Client Error: Forbidden for url: https://api.mistral.ai/v1/chat/completions', 'groq_llama3.3_70b': \"Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}\"}",
         "time": "2026-08-29T15:18:15.406528+00:00"
+      },
+      {
+        "step": "upload",
+        "error": "Missing required secrets: ['YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN']. Set them in GitHub repo Settings -> Secrets and variables -> Actions.",
+        "time": "2026-08-29T15:49:49.055947+00:00"
       }
     ],
     "assets": {
-      "research_path": "assets/shorts_20260829_151758_ca39fc/research.json"
+      "research_path": "assets/shorts_20260829_151758_ca39fc/research.json",
+      "script_path": "assets/shorts_20260829_151758_ca39fc/script.json",
+      "audio_path": "assets/shorts_20260829_151758_ca39fc/voice.mp3",
+      "visual_paths": [
+        "assets/shorts_20260829_151758_ca39fc/visuals/pexels_Midjourney_technology_0.mp4",
+        "assets/shorts_20260829_151758_ca39fc/visuals/pexels_Midjourney_technology_1.mp4",
+        "assets/shorts_20260829_151758_ca39fc/visuals/pexels_Midjourney_technology_2.mp4",
+        "assets/shorts_20260829_151758_ca39fc/visuals/pexels_Midjourney_technology_3.mp4"
+      ],
+      "accent_hex": "#00C2A8",
+      "music_path": "assets/music_cache/background_music.mp3",
+      "caption_data_path": "assets/shorts_20260829_151758_ca39fc/captions.json",
+      "sound_cues": [
+        {
+          "sfx_path": "assets/sfx_cache/whoosh.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.0
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.34
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 0.92
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 1.42
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 2.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 3.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 4.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 6.02
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 6.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 7.92
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 9.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 10.28
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 10.8
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 11.48
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 13.26
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 14.6
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 15.56
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 16.28
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 17.28
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 18.38
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 19.52
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 20.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 21.48
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 22.42
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 23.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 24.56
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 25.96
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 27.5
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 28.88
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 30.32
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 31.62
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 32.82
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 34.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 34.76
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 36.02
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 36.84
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 38.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 38.66
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 39.32
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 40.2
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 41.18
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 42.5
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 42.9
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 44.04
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 45.16
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 46.16
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 47.3
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 48.26
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 49.08
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 50.02
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 50.78
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 52.1
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 53.44
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 54.6
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 56.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 56.94
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 58.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 59.08
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 60.52
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 61.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 62.98
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 64.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 66.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 67.04
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 67.74
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 68.7
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 69.82
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 71.12
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 72.6
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 73.3
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 74.24
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 75.14
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 75.96
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 76.64
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 77.82
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 79.06
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 80.02
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 81.08
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 81.94
+        },
+        {
+          "sfx_path": "assets/sfx_cache/click.mp3",
+          "start_time": 83.02
+        }
+      ],
+      "total_duration": 83.48,
+      "final_video_path": "assets/shorts_20260829_151758_ca39fc/final_video.mp4"
     },
     "created_at": "2026-08-29T15:17:58.424762+00:00",
-    "last_updated": "2026-08-29T15:18:15.406542+00:00"
+    "last_updated": "2026-08-29T15:49:49.055963+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 4/10 \u2014 The hook is only mildly specific, the body is a bland list of features, and the verdict feels tacked\u2011on rather than earned, making it hard to keep viewers engaged. \u2014 published unlisted for manual review."
   }
 }
