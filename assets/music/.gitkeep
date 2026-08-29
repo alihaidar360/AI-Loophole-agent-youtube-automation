@@ -1,0 +1,6 @@
+This file exists only so Git tracks this otherwise-empty folder.
+
+Drop your own royalty-free .mp3 background music tracks here as an
+optional local fallback (only used if the automated Freesound lookup
+in modules/sound_library.py is ever unavailable). Not required —
+the pipeline works fine with this folder empty.
