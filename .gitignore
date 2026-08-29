@@ -1,0 +1,14 @@
+# Binary assets — cached by GitHub Actions, never committed
+assets/
+
+# Node
+remotion/node_modules/
+
+# Local environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
