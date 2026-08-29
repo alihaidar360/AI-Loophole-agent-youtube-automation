@@ -17,9 +17,9 @@ RESEARCH_TIER = {
 }
 
 SCRIPT_TIER = {
-    "groq_gpt-oss-120b": 1,
+    "groq_openai_gpt-oss-120b": 1,
     "mistral_large": 1,
-    "groq_llama3.3_70b": 2,
+    "groq_openai_gpt-oss-20b": 2,
 }
 
 CONFIDENCE_THRESHOLD = 4  # source_score >= this => downgrade to unlisted
@@ -36,7 +36,7 @@ def _self_score_content(script: dict) -> dict:
         Config.validate(["GROQ_API_KEY"])
         client = Groq(api_key=Config.GROQ_API_KEY)
         completion = client.chat.completions.create(
-            model="gpt-oss-120b",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "system", "content": SELF_SCORE_PROMPT},
                 {"role": "user", "content": json.dumps(script)},
