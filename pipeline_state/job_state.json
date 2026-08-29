@@ -24,6 +24,11 @@
         "step": "upload",
         "error": "Missing required secrets: ['YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN']. Set them in GitHub repo Settings -> Secrets and variables -> Actions.",
         "time": "2026-08-29T15:49:49.055947+00:00"
+      },
+      {
+        "step": "upload",
+        "error": "Missing required secrets: ['YT_CLIENT_ID', 'YT_CLIENT_SECRET', 'YT_REFRESH_TOKEN']. Set them in GitHub repo Settings -> Secrets and variables -> Actions.",
+        "time": "2026-08-29T20:22:35.744445+00:00"
       }
     ],
     "assets": {
@@ -369,8 +374,8 @@
       "final_video_path": "assets/shorts_20260829_151758_ca39fc/final_video.mp4"
     },
     "created_at": "2026-08-29T15:17:58.424762+00:00",
-    "last_updated": "2026-08-29T15:49:49.055963+00:00",
+    "last_updated": "2026-08-29T20:22:35.744462+00:00",
     "needs_manual_review": true,
-    "review_reason": "self-score 4/10 \u2014 The hook is only mildly specific, the body is a bland list of features, and the verdict feels tacked\u2011on rather than earned, making it hard to keep viewers engaged. \u2014 published unlisted for manual review."
+    "review_reason": "self-score 4/10 \u2014 The hook is only mildly specific and the script never builds a compelling, earned verdict, so it likely won\u2019t keep viewers engaged. \u2014 published unlisted for manual review."
   }
 }
