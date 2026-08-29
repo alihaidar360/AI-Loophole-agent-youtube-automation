@@ -1,5 +1,11 @@
-# Binary assets — cached by GitHub Actions, never committed
-assets/
+# Dynamic per-job and cache folders — regenerated every run, never committed
+assets/*
+!assets/music/
+!assets/sfx/
+
+# But DO keep the static fallback folders (and their placeholder files)
+!assets/music/.gitkeep
+!assets/sfx/.gitkeep
 
 # Node
 remotion/node_modules/
