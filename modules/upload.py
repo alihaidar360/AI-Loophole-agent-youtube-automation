@@ -50,9 +50,16 @@ def upload_video(video_path: str, thumbnail_path: str, title: str, description: 
     video_id = response["id"]
 
     if thumbnail_path and os.path.exists(thumbnail_path):
-        youtube.thumbnails().set(
-            videoId=video_id,
-            media_body=googleapiclient.http.MediaFileUpload(thumbnail_path),
-        ).execute()
+        try:
+            youtube.thumbnails().set(
+                videoId=video_id,
+                media_body=googleapiclient.http.MediaFileUpload(thumbnail_path),
+            ).execute()
+        except Exception as e:
+            # Custom thumbnails require a phone-verified YouTube channel.
+            # The video itself is already live at this point — don't fail
+            # the whole job over a cosmetic thumbnail issue. YouTube will
+            # just show an auto-generated thumbnail instead.
+            print(f"Warning: could not set custom thumbnail (video is still live): {e}")
 
     return video_id
