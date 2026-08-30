@@ -658,5 +658,16 @@
     "verdict_sentiment": null,
     "published_at": "2026-07-11T13:37:49Z",
     "backfilled": true
+  },
+  {
+    "job_id": "shorts_20260830_140706_6f0b08",
+    "topic": "Pika Labs",
+    "title": "Pika Labs AI Video Generator: Is It Worth the Hype?",
+    "video_type": "shorts",
+    "youtube_video_id": "gRgFvs9RhA0",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-08-30T14:17:58.794559+00:00",
+    "backfilled": false
   }
 ]
