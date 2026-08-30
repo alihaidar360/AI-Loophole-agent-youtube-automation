@@ -669,5 +669,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-08-30T14:17:58.794559+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260830_203045_a28a18",
+    "topic": "Cluely",
+    "title": "Cluely AI: 5 Surprising Facts You Missed",
+    "video_type": "shorts",
+    "youtube_video_id": "vi_x5TOh-b0",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-08-30T20:39:42.428227+00:00",
+    "backfilled": false
   }
 ]
