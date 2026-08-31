@@ -68,6 +68,11 @@
         "step": "assembly",
         "error": "Command '['npx', 'remotion', 'render', 'src/Root.jsx', 'LongformVideo', '/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260830_005807_63fe9a/final_video.mp4', '--props=/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260830_005807_63fe9a/remotion_props.json', '--width=1920', '--height=1080', '--public-dir=/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets']' timed out after 1800 seconds",
         "time": "2026-08-30T01:33:17.619157+00:00"
+      },
+      {
+        "step": "assembly",
+        "error": "Command '['npx', 'remotion', 'render', 'src/Root.jsx', 'LongformVideo', '/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260830_005807_63fe9a/final_video.mp4', '--props=/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets/longform_20260830_005807_63fe9a/remotion_props.json', '--width=1920', '--height=1080', '--public-dir=/home/runner/work/AI-Loophole-agent-youtube-automation/AI-Loophole-agent-youtube-automation/assets']' timed out after 1800 seconds",
+        "time": "2026-08-31T03:34:22.362307+00:00"
       }
     ],
     "assets": {
@@ -124,7 +129,7 @@
       "total_duration": 368.62
     },
     "created_at": "2026-08-30T00:58:07.541860+00:00",
-    "last_updated": "2026-08-30T01:33:17.619180+00:00"
+    "last_updated": "2026-08-31T03:34:22.362341+00:00"
   },
   "shorts_20260830_140706_6f0b08": {
     "job_id": "shorts_20260830_140706_6f0b08",
