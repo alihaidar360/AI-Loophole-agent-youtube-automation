@@ -702,5 +702,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-08-31T16:44:43.978429+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260831_172709_7bf4d3",
+    "topic": "Tome AI",
+    "title": "Tome AI Review: The 3\u2011Minute Pitch Deck That Actually Works (Or Not?)",
+    "video_type": "longform",
+    "youtube_video_id": "HL5VUTRjEng",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-08-31T18:29:11.235347+00:00",
+    "backfilled": false
   }
 ]
