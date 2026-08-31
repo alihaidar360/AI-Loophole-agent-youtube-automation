@@ -691,5 +691,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-08-31T05:48:02.353947+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260831_163232_a6b41b",
+    "topic": "Synthesia",
+    "title": "Synthesia AI Review: 3 Surprising Truths + One Big Limitation",
+    "video_type": "shorts",
+    "youtube_video_id": "V3S2lR2EIoo",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-08-31T16:44:43.978429+00:00",
+    "backfilled": false
   }
 ]

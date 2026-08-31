@@ -129,5 +129,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is specific enough to intrigue, but the script never delivers a clear, earned verdict and overloads the short with dense facts, likely losing viewers. \u2014 published unlisted for manual review.",
     "youtube_video_id": "vi_x5TOh-b0"
+  },
+  "shorts_20260831_163232_a6b41b": {
+    "job_id": "shorts_20260831_163232_a6b41b",
+    "video_type": "shorts",
+    "topic": "Synthesia",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-08-31T16:32:32.463947+00:00",
+    "last_updated": "2026-08-31T16:44:43.979192+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 4/10 \u2014 The hook feels generic and the verdict lacks compelling evidence, making it unlikely to keep viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "V3S2lR2EIoo"
   }
 }
