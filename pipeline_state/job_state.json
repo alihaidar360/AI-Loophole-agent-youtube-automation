@@ -53,16 +53,18 @@
     "job_id": "longform_20260830_005807_63fe9a",
     "video_type": "longform",
     "topic": "Midjourney",
-    "status": "paused_on_error",
+    "status": "archived",
     "completed_steps": [
       "research",
       "script",
       "voiceover",
       "visuals",
       "sound_design",
-      "captions"
+      "captions",
+      "assembly",
+      "upload"
     ],
-    "failed_step": "assembly",
+    "failed_step": null,
     "error_log": [
       {
         "step": "assembly",
@@ -75,61 +77,10 @@
         "time": "2026-08-31T03:34:22.362307+00:00"
       }
     ],
-    "assets": {
-      "research_path": "assets/longform_20260830_005807_63fe9a/research.json",
-      "script_path": "assets/longform_20260830_005807_63fe9a/script.json",
-      "audio_path": "assets/longform_20260830_005807_63fe9a/voice.mp3",
-      "visual_paths": [
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Hook_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Hook_1.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Origin_story_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Origin_story_1.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_What_it_actually_do_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_What_it_actually_do_1.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Hands_on_verdict_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Hands_on_verdict_1.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Real_limitations_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Real_limitations_1.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Final_verdict_0.mp4",
-        "assets/longform_20260830_005807_63fe9a/visuals/pexels_Midjourney_Final_verdict_1.mp4"
-      ],
-      "accent_hex": "#FF2EC4",
-      "music_path": null,
-      "caption_data_path": "assets/longform_20260830_005807_63fe9a/captions.json",
-      "sound_cues": [
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 0.0
-        },
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 61.43666666666667
-        },
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 122.87333333333333
-        },
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 184.31
-        },
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 245.74666666666667
-        },
-        {
-          "sfx_path": "assets/sfx_cache/whoosh.mp3",
-          "start_time": 307.18333333333334
-        },
-        {
-          "sfx_path": "assets/sfx_cache/impact.mp3",
-          "start_time": 313.327
-        }
-      ],
-      "total_duration": 368.62
-    },
+    "assets": {},
     "created_at": "2026-08-30T00:58:07.541860+00:00",
-    "last_updated": "2026-08-31T03:34:22.362341+00:00"
+    "last_updated": "2026-08-31T05:48:02.354492+00:00",
+    "youtube_video_id": "raSb3em0zE0"
   },
   "shorts_20260830_140706_6f0b08": {
     "job_id": "shorts_20260830_140706_6f0b08",

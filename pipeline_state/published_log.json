@@ -680,5 +680,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-08-30T20:39:42.428227+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260830_005807_63fe9a",
+    "topic": "Midjourney",
+    "title": "Midjourney V6 Deep Dive \u2013 Is It Worth the Hype? Hands\u2011On Review",
+    "video_type": "longform",
+    "youtube_video_id": "raSb3em0zE0",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-08-31T05:48:02.353947+00:00",
+    "backfilled": false
   }
 ]
