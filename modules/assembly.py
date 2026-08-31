@@ -77,7 +77,12 @@ def assemble_video(video_type: str, audio_path: str, visual_paths: list,
         f"--public-dir={ASSETS_ROOT}",
     ]
 
-    result = subprocess.run(cmd, cwd="remotion", capture_output=True, text=True, timeout=1800)
+    # Long-form (10-13 min, 1080p) renders can genuinely take a while on
+    # a shared CI runner — 30 min was too tight and caused false timeouts.
+    # The longform workflow itself allows up to 6 hours, so give the
+    # render process most of that headroom.
+    render_timeout_sec = 1800 if video_type == "shorts" else 5400
+    result = subprocess.run(cmd, cwd="remotion", capture_output=True, text=True, timeout=render_timeout_sec)
     if result.returncode != 0:
         raise RuntimeError(f"Remotion render failed:\n{result.stderr[-3000:]}")
 
