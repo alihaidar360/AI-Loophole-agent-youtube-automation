@@ -713,5 +713,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-08-31T18:29:11.235347+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260831_222428_d7ac63",
+    "topic": "Descript",
+    "title": "Descript Pricing EXPOSED: Is $49/Month Worth It?",
+    "video_type": "shorts",
+    "youtube_video_id": "qLqMFq5rwMk",
+    "privacy_status": "public",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-08-31T22:37:34.354337+00:00",
+    "backfilled": false
   }
 ]
