@@ -735,5 +735,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-01T13:59:59.569731+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260901_203142_29bb1b",
+    "topic": "v0 by Vercel",
+    "title": "V0 by Vercel: 5 Surprising Things You Need to Know!",
+    "video_type": "shorts",
+    "youtube_video_id": "gflNyRliAms",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-01T20:49:14.925539+00:00",
+    "backfilled": false
   }
 ]
