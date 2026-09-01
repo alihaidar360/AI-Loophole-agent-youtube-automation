@@ -724,5 +724,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-08-31T22:37:34.354337+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260901_135047_cbf63a",
+    "topic": "Windsurf",
+    "title": "5 Windsurf Secrets Google Misses \u2013 Boost Your Ride!",
+    "video_type": "shorts",
+    "youtube_video_id": "-Mvq7MjtWxM",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-01T13:59:59.569731+00:00",
+    "backfilled": false
   }
 ]
