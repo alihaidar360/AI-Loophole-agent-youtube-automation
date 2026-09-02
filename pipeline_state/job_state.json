@@ -271,5 +271,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is moderately specific but feels generic, and the script\u2019s verdict isn\u2019t convincingly earned, so it\u2019s unlikely to keep viewers fully engaged. \u2014 published unlisted for manual review.",
     "youtube_video_id": "9oPPnIKMRcE"
+  },
+  "shorts_20260902_203001_c21ca5": {
+    "job_id": "shorts_20260902_203001_c21ca5",
+    "video_type": "shorts",
+    "topic": "Lovable AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-02T20:30:01.658270+00:00",
+    "last_updated": "2026-09-02T20:48:34.190635+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook is generic and the verdict feels tacked on, so the script only marginally hooks and retains viewers. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "0JklMMdnHkg"
   }
 }

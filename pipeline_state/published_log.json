@@ -757,5 +757,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-02T13:17:06.701243+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260902_203001_c21ca5",
+    "topic": "Lovable AI",
+    "title": "Lovable AI App Builder: 3 Quick Wins & a Hidden Drawback",
+    "video_type": "shorts",
+    "youtube_video_id": "0JklMMdnHkg",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-02T20:48:34.189790+00:00",
+    "backfilled": false
   }
 ]
