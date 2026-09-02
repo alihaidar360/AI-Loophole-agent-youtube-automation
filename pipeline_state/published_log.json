@@ -746,5 +746,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-01T20:49:14.925539+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260902_130606_51695a",
+    "topic": "Tome AI",
+    "title": "Tome AI: Turn Text Into Slides Instantly \u2013 3 Game\u2011Changing Tricks",
+    "video_type": "shorts",
+    "youtube_video_id": "9oPPnIKMRcE",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-02T13:17:06.701243+00:00",
+    "backfilled": false
   }
 ]
