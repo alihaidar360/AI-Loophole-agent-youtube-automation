@@ -317,5 +317,29 @@
     "created_at": "2026-09-03T13:08:11.064077+00:00",
     "last_updated": "2026-09-03T13:18:57.974638+00:00",
     "youtube_video_id": "05cYC22EypA"
+  },
+  "longform_20260903_141020_19d316": {
+    "job_id": "longform_20260903_141020_19d316",
+    "video_type": "longform",
+    "topic": "v0 by Vercel",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-03T14:10:20.076422+00:00",
+    "last_updated": "2026-09-03T15:35:08.964876+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "eCYC0LKwUeg"
   }
 }

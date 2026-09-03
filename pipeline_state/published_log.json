@@ -779,5 +779,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-03T13:18:57.973830+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260903_141020_19d316",
+    "topic": "v0 by Vercel",
+    "title": "v0 by Vercel Deep Dive: The AI\u2011Powered Full\u2011Stack Builder That Cuts Development Time by 70%",
+    "video_type": "longform",
+    "youtube_video_id": "eCYC0LKwUeg",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-03T15:35:08.964107+00:00",
+    "backfilled": false
   }
 ]
