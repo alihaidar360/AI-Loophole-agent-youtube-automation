@@ -768,5 +768,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-02T20:48:34.189790+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260903_130811_43ffd9",
+    "topic": "Perplexity AI",
+    "title": "Perplexity AI: 3 Hidden Tricks + One Big Limitation!",
+    "video_type": "shorts",
+    "youtube_video_id": "05cYC22EypA",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-03T13:18:57.973830+00:00",
+    "backfilled": false
   }
 ]

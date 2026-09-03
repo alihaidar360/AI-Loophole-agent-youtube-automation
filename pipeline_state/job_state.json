@@ -295,5 +295,27 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook is generic and the verdict feels tacked on, so the script only marginally hooks and retains viewers. \u2014 published unlisted for manual review.",
     "youtube_video_id": "0JklMMdnHkg"
+  },
+  "shorts_20260903_130811_43ffd9": {
+    "job_id": "shorts_20260903_130811_43ffd9",
+    "video_type": "shorts",
+    "topic": "Perplexity AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-03T13:08:11.064077+00:00",
+    "last_updated": "2026-09-03T13:18:57.974638+00:00",
+    "youtube_video_id": "05cYC22EypA"
   }
 }
