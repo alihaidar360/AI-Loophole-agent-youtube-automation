@@ -790,5 +790,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-03T15:35:08.964107+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260903_202853_0e0c90",
+    "topic": "Notion AI",
+    "title": "Notion AI vs Claude AI: 5 Hacks That Save Hours (Plus a Caveat)",
+    "video_type": "shorts",
+    "youtube_video_id": "WIFmyhmch0c",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-03T20:46:35.942707+00:00",
+    "backfilled": false
   }
 ]

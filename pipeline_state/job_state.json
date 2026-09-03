@@ -341,5 +341,27 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "eCYC0LKwUeg"
+  },
+  "shorts_20260903_202853_0e0c90": {
+    "job_id": "shorts_20260903_202853_0e0c90",
+    "video_type": "shorts",
+    "topic": "Notion AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-03T20:28:53.910773+00:00",
+    "last_updated": "2026-09-03T20:46:35.943572+00:00",
+    "youtube_video_id": "WIFmyhmch0c"
   }
 }
