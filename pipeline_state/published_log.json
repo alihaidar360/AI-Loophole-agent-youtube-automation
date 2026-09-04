@@ -812,5 +812,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-04T13:16:32.262053+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260904_203215_e929c9",
+    "topic": "GitHub Copilot",
+    "title": "GitHub Copilot: 3 Insider Tricks + One Big Limitation",
+    "video_type": "shorts",
+    "youtube_video_id": "ZrXXPitOyWo",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-04T20:44:09.073461+00:00",
+    "backfilled": false
   }
 ]
