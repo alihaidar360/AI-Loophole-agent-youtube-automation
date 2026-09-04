@@ -801,5 +801,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-03T20:46:35.942707+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260904_130224_489d33",
+    "topic": "Suno AI",
+    "title": "Suno AI Music Generator: 30\u2011Second Songs?",
+    "video_type": "shorts",
+    "youtube_video_id": "tPp0pdkL8zM",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-04T13:16:32.262053+00:00",
+    "backfilled": false
   }
 ]
