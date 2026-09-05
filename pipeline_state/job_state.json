@@ -407,5 +407,29 @@
     "created_at": "2026-09-04T20:32:15.001931+00:00",
     "last_updated": "2026-09-04T20:44:09.074297+00:00",
     "youtube_video_id": "ZrXXPitOyWo"
+  },
+  "shorts_20260905_121553_cdbbb6": {
+    "job_id": "shorts_20260905_121553_cdbbb6",
+    "video_type": "shorts",
+    "topic": "ChatGPT",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-05T12:15:53.803159+00:00",
+    "last_updated": "2026-09-05T12:33:42.734349+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook feels generic and the verdict isn\u2019t convincingly backed, so most viewers would likely lose interest quickly. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "gnCoWIS2S0M"
   }
 }

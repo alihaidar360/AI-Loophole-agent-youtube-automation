@@ -823,5 +823,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-04T20:44:09.073461+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260905_121553_cdbbb6",
+    "topic": "ChatGPT",
+    "title": "5 Shocking Realities About ChatGPT You Didn't Know",
+    "video_type": "shorts",
+    "youtube_video_id": "gnCoWIS2S0M",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-05T12:33:42.733691+00:00",
+    "backfilled": false
   }
 ]
