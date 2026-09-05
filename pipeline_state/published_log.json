@@ -834,5 +834,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-05T12:33:42.733691+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260905_195419_e38192",
+    "topic": "Replit Agent",
+    "title": "Replit Agent: 4 Ways It Supercharges Coding (plus a Hidden Limitation)",
+    "video_type": "shorts",
+    "youtube_video_id": "1tYoH-XD9Hg",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-05T20:03:21.156787+00:00",
+    "backfilled": false
   }
 ]

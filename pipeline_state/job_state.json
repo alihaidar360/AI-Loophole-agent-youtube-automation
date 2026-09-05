@@ -431,5 +431,29 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook feels generic and the verdict isn\u2019t convincingly backed, so most viewers would likely lose interest quickly. \u2014 published unlisted for manual review.",
     "youtube_video_id": "gnCoWIS2S0M"
+  },
+  "shorts_20260905_195419_e38192": {
+    "job_id": "shorts_20260905_195419_e38192",
+    "video_type": "shorts",
+    "topic": "Replit Agent",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-05T19:54:19.581754+00:00",
+    "last_updated": "2026-09-05T20:03:21.157681+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 Hook is catchy but the script\u2019s vague claims and weakly earned verdict make it unlikely to hold viewers\u2019 attention. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "1tYoH-XD9Hg"
   }
 }
