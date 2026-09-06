@@ -845,5 +845,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-05T20:03:21.156787+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260906_122924_5eacad",
+    "topic": "Canva Magic Studio",
+    "title": "Canva Magic Studio Review: AI Video Maker & Design Assistant in 60 Seconds",
+    "video_type": "shorts",
+    "youtube_video_id": "N3i8Amjuscs",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-06T12:40:44.901640+00:00",
+    "backfilled": false
   }
 ]

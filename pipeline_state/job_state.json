@@ -455,5 +455,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 Hook is catchy but the script\u2019s vague claims and weakly earned verdict make it unlikely to hold viewers\u2019 attention. \u2014 published unlisted for manual review.",
     "youtube_video_id": "1tYoH-XD9Hg"
+  },
+  "shorts_20260906_122924_5eacad": {
+    "job_id": "shorts_20260906_122924_5eacad",
+    "video_type": "shorts",
+    "topic": "Canva Magic Studio",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-06T12:29:24.905320+00:00",
+    "last_updated": "2026-09-06T12:40:44.902503+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "N3i8Amjuscs"
   }
 }
