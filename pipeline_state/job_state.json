@@ -479,5 +479,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "N3i8Amjuscs"
+  },
+  "shorts_20260906_195850_95c55d": {
+    "job_id": "shorts_20260906_195850_95c55d",
+    "video_type": "shorts",
+    "topic": "Gamma App",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-06T19:58:50.059706+00:00",
+    "last_updated": "2026-09-06T20:10:15.312943+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "NDwsiZiukI4"
   }
 }
