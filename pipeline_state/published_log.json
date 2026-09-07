@@ -889,5 +889,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-07T16:35:13.450779+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260907_210718_9ff864",
+    "topic": "Cluely",
+    "title": "Cluely AI: 3 Hacks to Supercharge Your Work (Plus Its Biggest Flaw)",
+    "video_type": "shorts",
+    "youtube_video_id": "1pZ8CHoZKps",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-07T21:19:43.515680+00:00",
+    "backfilled": false
   }
 ]
