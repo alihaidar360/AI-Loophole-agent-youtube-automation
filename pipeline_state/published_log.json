@@ -867,5 +867,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-06T20:10:15.312066+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260907_143731_55d0a3",
+    "topic": "Pika Labs",
+    "title": "Pika Labs AI Video Generator: 5 Surprising Truths",
+    "video_type": "shorts",
+    "youtube_video_id": "cGQRozC1nG4",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-07T14:49:12.589327+00:00",
+    "backfilled": false
   }
 ]
