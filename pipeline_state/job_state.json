@@ -573,5 +573,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "1pZ8CHoZKps"
+  },
+  "shorts_20260908_131206_951bf5": {
+    "job_id": "shorts_20260908_131206_951bf5",
+    "video_type": "shorts",
+    "topic": "Midjourney",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-08T13:12:06.959045+00:00",
+    "last_updated": "2026-09-08T13:27:53.697668+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook is a bit specific but the script\u2019s vague claims and weak, after\u2011the\u2011fact verdict make it unlikely to keep viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "wE38rmsJwAI"
   }
 }

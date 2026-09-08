@@ -900,5 +900,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-07T21:19:43.515680+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260908_131206_951bf5",
+    "topic": "Midjourney",
+    "title": "Midjourney V8 Secrets: From \"nanobanana\" to Perfect AI Art in 60 Seconds",
+    "video_type": "shorts",
+    "youtube_video_id": "wE38rmsJwAI",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-08T13:27:53.696765+00:00",
+    "backfilled": false
   }
 ]
