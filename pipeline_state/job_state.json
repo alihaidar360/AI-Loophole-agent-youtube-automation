@@ -597,5 +597,29 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook is a bit specific but the script\u2019s vague claims and weak, after\u2011the\u2011fact verdict make it unlikely to keep viewers engaged. \u2014 published unlisted for manual review.",
     "youtube_video_id": "wE38rmsJwAI"
+  },
+  "shorts_20260908_204216_b12eea": {
+    "job_id": "shorts_20260908_204216_b12eea",
+    "video_type": "shorts",
+    "topic": "Synthesia",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-08T20:42:16.135114+00:00",
+    "last_updated": "2026-09-08T20:54:54.482737+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 4/10 \u2014 The hook is only mildly specific and feels generic, and the verdict isn\u2019t strongly earned, so the script would likely struggle to keep viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "PLPGbaji-Bc"
   }
 }

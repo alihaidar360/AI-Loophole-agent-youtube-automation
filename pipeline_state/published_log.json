@@ -911,5 +911,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-08T13:27:53.696765+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260908_204216_b12eea",
+    "topic": "Synthesia",
+    "title": "Synthesia AI: Can It Really Create Perfect Videos in Minutes?",
+    "video_type": "shorts",
+    "youtube_video_id": "PLPGbaji-Bc",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-08T20:54:54.481750+00:00",
+    "backfilled": false
   }
 ]
