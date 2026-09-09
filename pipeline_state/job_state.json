@@ -643,5 +643,29 @@
     "created_at": "2026-09-09T13:17:25.695472+00:00",
     "last_updated": "2026-09-09T13:27:59.330550+00:00",
     "youtube_video_id": "Xz1pFGiXZuc"
+  },
+  "shorts_20260909_202406_bd5ca6": {
+    "job_id": "shorts_20260909_202406_bd5ca6",
+    "video_type": "shorts",
+    "topic": "v0 by Vercel",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-09T20:24:06.314780+00:00",
+    "last_updated": "2026-09-09T20:42:58.805607+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is only mildly specific and the script leans on vague numbers and an under\u2011developed skeptical verdict, making it unlikely to fully hook and keep viewers. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "pqGkQUp_x6Y"
   }
 }
