@@ -621,5 +621,27 @@
     "needs_manual_review": true,
     "review_reason": "self-score 4/10 \u2014 The hook is only mildly specific and feels generic, and the verdict isn\u2019t strongly earned, so the script would likely struggle to keep viewers engaged. \u2014 published unlisted for manual review.",
     "youtube_video_id": "PLPGbaji-Bc"
+  },
+  "shorts_20260909_131725_e8b998": {
+    "job_id": "shorts_20260909_131725_e8b998",
+    "video_type": "shorts",
+    "topic": "Descript",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-09T13:17:25.695472+00:00",
+    "last_updated": "2026-09-09T13:27:59.330550+00:00",
+    "youtube_video_id": "Xz1pFGiXZuc"
   }
 }

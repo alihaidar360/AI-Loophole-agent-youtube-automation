@@ -922,5 +922,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-08T20:54:54.481750+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260909_131725_e8b998",
+    "topic": "Descript",
+    "title": "Descript Deep Dive: Edit Audio Like a Word Doc \u2013 Pros, Cons & Pricing",
+    "video_type": "shorts",
+    "youtube_video_id": "Xz1pFGiXZuc",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-09T13:27:59.329645+00:00",
+    "backfilled": false
   }
 ]
