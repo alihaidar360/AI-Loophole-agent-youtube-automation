@@ -944,5 +944,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-09T20:42:58.804637+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260910_131600_1e6a0b",
+    "topic": "Windsurf",
+    "title": "5 Ways AI is Revolutionizing Windsurfing (And One Big Catch)",
+    "video_type": "shorts",
+    "youtube_video_id": "vkoMfcSh25g",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-10T13:27:35.539112+00:00",
+    "backfilled": false
   }
 ]
