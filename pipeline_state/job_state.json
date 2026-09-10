@@ -715,5 +715,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "t0PGKmi2q3o"
+  },
+  "shorts_20260910_202512_8b7c44": {
+    "job_id": "shorts_20260910_202512_8b7c44",
+    "video_type": "shorts",
+    "topic": "Cursor AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-10T20:25:12.422150+00:00",
+    "last_updated": "2026-09-10T20:37:37.162383+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 4/10 \u2014 The hook is only marginally specific and the script\u2019s vague claims and weakly earned verdict make it unlikely to keep viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "wR1s9U8e3VU"
   }
 }

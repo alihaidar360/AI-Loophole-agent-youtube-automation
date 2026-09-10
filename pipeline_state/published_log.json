@@ -966,5 +966,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-10T15:01:38.390202+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260910_202512_8b7c44",
+    "topic": "Cursor AI",
+    "title": "Cursor AI vs. The Competition: 5 Surprising Truths",
+    "video_type": "shorts",
+    "youtube_video_id": "wR1s9U8e3VU",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-10T20:37:37.161414+00:00",
+    "backfilled": false
   }
 ]
