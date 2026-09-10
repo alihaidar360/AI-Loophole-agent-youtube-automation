@@ -955,5 +955,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-10T13:27:35.539112+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260910_140624_7aa690",
+    "topic": "Canva Magic Studio",
+    "title": "Canva Magic Studio Review: AI Design Tool That Actually Saves Time?",
+    "video_type": "longform",
+    "youtube_video_id": "t0PGKmi2q3o",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-10T15:01:38.390202+00:00",
+    "backfilled": false
   }
 ]
