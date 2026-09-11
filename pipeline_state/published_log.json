@@ -977,5 +977,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-10T20:37:37.161414+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260911_130953_6987a2",
+    "topic": "Lovable AI",
+    "title": "Lovable AI: 3 Surprising Strengths & The One Big Flaw You Need to Know",
+    "video_type": "shorts",
+    "youtube_video_id": "ezJzOz1lKJI",
+    "privacy_status": "public",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-11T13:23:28.070549+00:00",
+    "backfilled": false
   }
 ]
