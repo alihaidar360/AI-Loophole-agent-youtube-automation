@@ -988,5 +988,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-11T13:23:28.070549+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260911_202603_0d10ae",
+    "topic": "Notion AI",
+    "title": "Notion AI Secrets: 3 Hacks to Supercharge Your Workflow!",
+    "video_type": "shorts",
+    "youtube_video_id": "DVYXenot3_c",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-11T20:40:31.914579+00:00",
+    "backfilled": false
   }
 ]
