@@ -1010,5 +1010,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-12T12:41:14.611328+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260912_201003_3e9484",
+    "topic": "Suno AI",
+    "title": "Suno AI in 60 Seconds: 5 Cool Tricks & 1 Big Flaw",
+    "video_type": "shorts",
+    "youtube_video_id": "vcBW3XrxJZ0",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-12T20:22:47.985575+00:00",
+    "backfilled": false
   }
 ]
