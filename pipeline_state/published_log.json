@@ -1021,5 +1021,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-12T20:22:47.985575+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260913_133428_38d63d",
+    "topic": "GitHub Copilot",
+    "title": "5 Surprising Ways GitHub Copilot Supercharges Your Code (and One Big Flaw)",
+    "video_type": "shorts",
+    "youtube_video_id": "DbYC0C6evU4",
+    "privacy_status": "public",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-13T13:44:37.820810+00:00",
+    "backfilled": false
   }
 ]

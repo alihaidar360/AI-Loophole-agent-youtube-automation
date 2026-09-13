@@ -831,5 +831,27 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook is catchy but generic and the script fails to fully substantiate its skeptical verdict, so it likely won\u2019t keep viewers engaged through the whole video. \u2014 published unlisted for manual review.",
     "youtube_video_id": "vcBW3XrxJZ0"
+  },
+  "shorts_20260913_133428_38d63d": {
+    "job_id": "shorts_20260913_133428_38d63d",
+    "video_type": "shorts",
+    "topic": "GitHub Copilot",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-13T13:34:28.200139+00:00",
+    "last_updated": "2026-09-13T13:44:37.821880+00:00",
+    "youtube_video_id": "DbYC0C6evU4"
   }
 }
