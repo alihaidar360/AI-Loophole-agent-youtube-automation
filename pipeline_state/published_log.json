@@ -1065,5 +1065,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-14T17:01:51.571982+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260914_212611_85d544",
+    "topic": "Canva Magic Studio",
+    "title": "Canva Magic Studio: 3 AI Tricks That Turn Text into Video FAST",
+    "video_type": "shorts",
+    "youtube_video_id": "HSX4hIKpGHY",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-14T21:37:44.907934+00:00",
+    "backfilled": false
   }
 ]
