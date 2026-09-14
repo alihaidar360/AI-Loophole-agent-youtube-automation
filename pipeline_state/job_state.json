@@ -901,5 +901,29 @@
     "needs_manual_review": true,
     "review_reason": "self-score 4/10 \u2014 The hook feels generic and the script never delivers a decisive, earned verdict, so it\u2019s unlikely to keep viewers hooked. \u2014 published unlisted for manual review.",
     "youtube_video_id": "0F1AmSYXmD0"
+  },
+  "longform_20260914_161140_89b9b0": {
+    "job_id": "longform_20260914_161140_89b9b0",
+    "video_type": "longform",
+    "topic": "Cluely",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-14T16:11:40.692215+00:00",
+    "last_updated": "2026-09-14T17:01:51.573029+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "A_Rk1SvETMY"
   }
 }

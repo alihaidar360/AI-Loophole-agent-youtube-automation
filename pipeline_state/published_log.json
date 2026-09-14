@@ -1054,5 +1054,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-14T15:36:51.761480+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260914_161140_89b9b0",
+    "topic": "Cluely",
+    "title": "Cluely Review: Does This AI Knowledge Engine Really Beat Enterprise Search?",
+    "video_type": "longform",
+    "youtube_video_id": "A_Rk1SvETMY",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-14T17:01:51.571982+00:00",
+    "backfilled": false
   }
 ]
