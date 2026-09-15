@@ -1076,5 +1076,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-14T21:37:44.907934+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260915_140111_943c0a",
+    "topic": "ElevenLabs",
+    "title": "ElevenLabs AI Voice: 5 Surprising Facts in 45 Seconds",
+    "video_type": "shorts",
+    "youtube_video_id": "eLlUt6HITmQ",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-15T14:18:23.532522+00:00",
+    "backfilled": false
   }
 ]

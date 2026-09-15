@@ -949,5 +949,27 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is only mildly specific and the verdict feels tacked on, so the script would likely lose viewers after the intro. \u2014 published unlisted for manual review.",
     "youtube_video_id": "HSX4hIKpGHY"
+  },
+  "shorts_20260915_140111_943c0a": {
+    "job_id": "shorts_20260915_140111_943c0a",
+    "video_type": "shorts",
+    "topic": "ElevenLabs",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-15T14:01:11.676875+00:00",
+    "last_updated": "2026-09-15T14:18:23.533387+00:00",
+    "youtube_video_id": "eLlUt6HITmQ"
   }
 }
