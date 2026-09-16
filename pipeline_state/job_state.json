@@ -995,5 +995,27 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "qrojOWOrY2Q"
+  },
+  "shorts_20260916_135414_8a7aaa": {
+    "job_id": "shorts_20260916_135414_8a7aaa",
+    "video_type": "shorts",
+    "topic": "Perplexity AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-16T13:54:14.436422+00:00",
+    "last_updated": "2026-09-16T14:08:24.533769+00:00",
+    "youtube_video_id": "YzxB-6s_CMk"
   }
 }

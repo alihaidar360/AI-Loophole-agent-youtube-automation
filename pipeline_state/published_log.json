@@ -1098,5 +1098,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-15T20:59:47.408937+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260916_135414_8a7aaa",
+    "topic": "Perplexity AI",
+    "title": "Perplexity AI Deep Dive: 4 Things It Does Better Than Google (and One Big Flaw)",
+    "video_type": "shorts",
+    "youtube_video_id": "YzxB-6s_CMk",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-16T14:08:24.532603+00:00",
+    "backfilled": false
   }
 ]
