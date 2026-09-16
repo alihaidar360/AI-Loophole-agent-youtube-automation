@@ -1109,5 +1109,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-16T14:08:24.532603+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260916_205327_3761ce",
+    "topic": "Synthesia",
+    "title": "Synthesia AI: 5 Surprising Ways It Can Make Your Videos Pop (And One Big Drawback)",
+    "video_type": "shorts",
+    "youtube_video_id": "B5BVS45xX1Y",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-16T21:04:09.767002+00:00",
+    "backfilled": false
   }
 ]

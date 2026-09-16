@@ -1017,5 +1017,29 @@
     "created_at": "2026-09-16T13:54:14.436422+00:00",
     "last_updated": "2026-09-16T14:08:24.533769+00:00",
     "youtube_video_id": "YzxB-6s_CMk"
+  },
+  "shorts_20260916_205327_3761ce": {
+    "job_id": "shorts_20260916_205327_3761ce",
+    "video_type": "shorts",
+    "topic": "Synthesia",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-16T20:53:27.123163+00:00",
+    "last_updated": "2026-09-16T21:04:09.768069+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook is mildly specific but not striking, and the verdict feels tacked on rather than earned, so the script would likely only moderately hold a viewer\u2019s attention. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "B5BVS45xX1Y"
   }
 }
