@@ -1131,5 +1131,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-17T14:22:54.438063+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260917_144353_b953c1",
+    "topic": "Descript",
+    "title": "Descript Review: The All\u2011In\u2011One Podcast & Video Editor That Actually Saves You Hours",
+    "video_type": "longform",
+    "youtube_video_id": "Ua__vPzwpQc",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-17T15:35:11.675673+00:00",
+    "backfilled": false
   }
 ]

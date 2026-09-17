@@ -1063,5 +1063,29 @@
     "created_at": "2026-09-17T14:01:43.844719+00:00",
     "last_updated": "2026-09-17T14:22:54.438917+00:00",
     "youtube_video_id": "ImcAVvMko40"
+  },
+  "longform_20260917_144353_b953c1": {
+    "job_id": "longform_20260917_144353_b953c1",
+    "video_type": "longform",
+    "topic": "Descript",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-17T14:43:53.607282+00:00",
+    "last_updated": "2026-09-17T15:35:11.677231+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "Ua__vPzwpQc"
   }
 }
