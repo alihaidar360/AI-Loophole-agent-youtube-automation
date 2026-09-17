@@ -1142,5 +1142,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-17T15:35:11.675673+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260917_205851_f125c8",
+    "topic": "v0 by Vercel",
+    "title": "Vercel v0 in 60 Seconds: AI App in One Click?",
+    "video_type": "shorts",
+    "youtube_video_id": "norN5BHshaQ",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-17T21:09:23.706037+00:00",
+    "backfilled": false
   }
 ]
