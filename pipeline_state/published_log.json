@@ -1164,5 +1164,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-18T13:32:59.581996+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260918_202257_9f1f0f",
+    "topic": "Pika Labs",
+    "title": "Pika Labs AI Video Generator: Fast Fun, But Not Cinematic",
+    "video_type": "shorts",
+    "youtube_video_id": "4AoPow2WnLA",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-18T20:37:30.813797+00:00",
+    "backfilled": false
   }
 ]

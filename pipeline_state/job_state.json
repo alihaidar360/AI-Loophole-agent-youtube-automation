@@ -1133,5 +1133,29 @@
     "created_at": "2026-09-18T13:17:46.584449+00:00",
     "last_updated": "2026-09-18T13:32:59.583197+00:00",
     "youtube_video_id": "QPDCheOj8tk"
+  },
+  "shorts_20260918_202257_9f1f0f": {
+    "job_id": "shorts_20260918_202257_9f1f0f",
+    "video_type": "shorts",
+    "topic": "Pika Labs",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-18T20:22:57.093158+00:00",
+    "last_updated": "2026-09-18T20:37:30.815016+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is vague and the verdict feels tacked on rather than earned, so it\u2019s unlikely to keep most viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "4AoPow2WnLA"
   }
 }
