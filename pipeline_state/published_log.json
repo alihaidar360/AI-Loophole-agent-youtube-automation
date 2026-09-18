@@ -1153,5 +1153,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-17T21:09:23.706037+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260918_131746_bed916",
+    "topic": "Descript",
+    "title": "Descript Deep Dive: 4 Game\u2011Changing Features (and One Drawback)",
+    "video_type": "shorts",
+    "youtube_video_id": "QPDCheOj8tk",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-18T13:32:59.581996+00:00",
+    "backfilled": false
   }
 ]
