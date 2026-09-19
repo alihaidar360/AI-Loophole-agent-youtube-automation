@@ -1181,5 +1181,29 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook is vaguely specific but feels generic, and the verdict isn\u2019t convincingly earned, so the script would likely struggle to fully hook and keep viewers. \u2014 published unlisted for manual review.",
     "youtube_video_id": "FgirE37DlX0"
+  },
+  "shorts_20260919_200254_63cd88": {
+    "job_id": "shorts_20260919_200254_63cd88",
+    "video_type": "shorts",
+    "topic": "Jasper AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-19T20:02:54.927173+00:00",
+    "last_updated": "2026-09-19T20:18:14.561846+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook is a generic hype claim and the dense, data\u2011heavy body fails to sustain interest, making the verdict feel tacked on. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "LRUQzeU3lTM"
   }
 }

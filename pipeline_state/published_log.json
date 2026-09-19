@@ -1186,5 +1186,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-19T12:57:49.475805+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260919_200254_63cd88",
+    "topic": "Jasper AI",
+    "title": "Google AI vs Claude vs Jasper: Which Writes Better?",
+    "video_type": "shorts",
+    "youtube_video_id": "LRUQzeU3lTM",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-19T20:18:14.560589+00:00",
+    "backfilled": false
   }
 ]
