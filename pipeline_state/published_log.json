@@ -1175,5 +1175,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-18T20:37:30.813797+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260919_124822_5ad79f",
+    "topic": "Windsurf",
+    "title": "Windself IDE: 3 Surprising Ways It Cuts Bugs by 30%",
+    "video_type": "shorts",
+    "youtube_video_id": "FgirE37DlX0",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-19T12:57:49.475805+00:00",
+    "backfilled": false
   }
 ]
