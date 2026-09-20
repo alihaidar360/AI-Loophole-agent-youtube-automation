@@ -1197,5 +1197,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-19T20:18:14.560589+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260920_132047_5465a7",
+    "topic": "Lovable AI",
+    "title": "Lovable AI in 5 Minutes: What It Can Really Do (And What It Can\u2019t)",
+    "video_type": "shorts",
+    "youtube_video_id": "cgp_mJPJGAg",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-20T13:36:00.823070+00:00",
+    "backfilled": false
   }
 ]
