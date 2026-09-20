@@ -1208,5 +1208,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-20T13:36:00.823070+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260920_201754_faacb4",
+    "topic": "Cursor AI",
+    "title": "Cursor AI Deep Dive: 5 Surprising Ways It Boosts Coding Speed (and 1 Big Flaw)",
+    "video_type": "shorts",
+    "youtube_video_id": "sVNxqa1DvcY",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-20T20:28:12.370488+00:00",
+    "backfilled": false
   }
 ]
