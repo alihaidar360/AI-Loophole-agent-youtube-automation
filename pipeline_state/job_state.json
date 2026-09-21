@@ -1249,5 +1249,27 @@
     "created_at": "2026-09-20T20:17:54.078048+00:00",
     "last_updated": "2026-09-20T20:28:12.371656+00:00",
     "youtube_video_id": "sVNxqa1DvcY"
+  },
+  "shorts_20260921_153344_af7aeb": {
+    "job_id": "shorts_20260921_153344_af7aeb",
+    "video_type": "shorts",
+    "topic": "GitHub Copilot",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-21T15:33:44.200334+00:00",
+    "last_updated": "2026-09-21T15:39:59.439150+00:00",
+    "youtube_video_id": "498gxlNnutg"
   }
 }

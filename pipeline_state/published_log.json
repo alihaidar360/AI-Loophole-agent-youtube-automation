@@ -1219,5 +1219,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-20T20:28:12.370488+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260921_153344_af7aeb",
+    "topic": "GitHub Copilot",
+    "title": "GitHub Copilot Deep Dive: 4 Surprising Ways It Boosts (and Breaks) Your Code",
+    "video_type": "shorts",
+    "youtube_video_id": "498gxlNnutg",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-21T15:39:59.438459+00:00",
+    "backfilled": false
   }
 ]
