@@ -1230,5 +1230,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-21T15:39:59.438459+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260921_161351_40a90e",
+    "topic": "Pika Labs",
+    "title": "Pika Labs Review: The AI Video Generator That's Actually Worth Your Time",
+    "video_type": "longform",
+    "youtube_video_id": "ytHlnhXv2nw",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-21T17:14:29.464494+00:00",
+    "backfilled": false
   }
 ]
