@@ -1295,5 +1295,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "ytHlnhXv2nw"
+  },
+  "shorts_20260921_214414_a4f11f": {
+    "job_id": "shorts_20260921_214414_a4f11f",
+    "video_type": "shorts",
+    "topic": "Tome AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-09-21T21:44:14.526498+00:00",
+    "last_updated": "2026-09-21T21:51:04.771708+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b); self-score 5/10 \u2014 The hook is generic and the script relies on vague claims, so it fails to earn a compelling verdict that would keep viewers watching. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "KImU897Wgzc"
   }
 }

@@ -1241,5 +1241,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-21T17:14:29.464494+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "shorts_20260921_214414_a4f11f",
+    "topic": "Tome AI",
+    "title": "Turn One Paragraph into a Full Deck with Tome AI (3 Tricks)",
+    "video_type": "shorts",
+    "youtube_video_id": "KImU897Wgzc",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-09-21T21:51:04.770950+00:00",
+    "backfilled": false
   }
 ]
