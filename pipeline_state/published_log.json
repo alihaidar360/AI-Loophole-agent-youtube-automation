@@ -1252,5 +1252,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-09-21T21:51:04.770950+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260924_144021_cd6d5f",
+    "topic": "Synthesia",
+    "title": "Synthesia Review: AI Video Creation Tested \u2013 Is It Worth Your Money?",
+    "video_type": "longform",
+    "youtube_video_id": "qRH2liG9dz4",
+    "privacy_status": "public",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-24T15:48:45.388754+00:00",
+    "backfilled": false
   }
 ]
