@@ -1263,5 +1263,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-24T15:48:45.388754+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20260928_180008_70a288",
+    "topic": "Lovable AI",
+    "title": "Lovable AI Review: The First Chatbot That Actually Remembers You?",
+    "video_type": "longform",
+    "youtube_video_id": "X783lcjWG7E",
+    "privacy_status": "public",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-09-28T19:30:48.162050+00:00",
+    "backfilled": false
   }
 ]
