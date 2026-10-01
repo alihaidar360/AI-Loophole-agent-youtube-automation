@@ -1274,5 +1274,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-09-28T19:30:48.162050+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20261001_170010_cd2b20",
+    "topic": "GitHub Copilot",
+    "title": "GitHub Copilot Review: Does AI Coding Really Speed Me Up?",
+    "video_type": "longform",
+    "youtube_video_id": "WqzJjjsgEo0",
+    "privacy_status": "public",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-10-01T17:53:04.516277+00:00",
+    "backfilled": false
   }
 ]
