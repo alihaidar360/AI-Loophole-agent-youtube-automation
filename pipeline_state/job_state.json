@@ -1541,5 +1541,29 @@
     "created_at": "2026-10-01T17:00:10.132438+00:00",
     "last_updated": "2026-10-01T17:53:04.576299+00:00",
     "youtube_video_id": "WqzJjjsgEo0"
+  },
+  "longform_20261005_190639_39cbdd": {
+    "job_id": "longform_20261005_190639_39cbdd",
+    "video_type": "longform",
+    "topic": "ElevenLabs",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-10-05T19:06:39.929409+00:00",
+    "last_updated": "2026-10-05T20:10:57.084696+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 5/10 \u2014 The hook is overly wordy and technical, and while the verdict is data\u2011driven, the script\u2019s dense detail will likely lose most viewers before the end. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "DNuJrxnm0LE"
   }
 }
