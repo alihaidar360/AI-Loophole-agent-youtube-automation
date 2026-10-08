@@ -1595,5 +1595,29 @@
     "needs_manual_review": true,
     "review_reason": "self-score 5/10 \u2014 The hook is overly wordy and technical, and while the verdict is data\u2011driven, the script\u2019s dense detail will likely lose most viewers before the end. \u2014 published unlisted for manual review.",
     "youtube_video_id": "DNuJrxnm0LE"
+  },
+  "longform_20261008_171654_77db0e": {
+    "job_id": "longform_20261008_171654_77db0e",
+    "video_type": "longform",
+    "topic": "Grammarly AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-10-08T17:16:54.124379+00:00",
+    "last_updated": "2026-10-08T18:03:54.183358+00:00",
+    "needs_manual_review": true,
+    "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
+    "youtube_video_id": "jDQC3iTYTOQ"
   }
 }

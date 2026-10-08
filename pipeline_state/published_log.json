@@ -1296,5 +1296,16 @@
     "verdict_sentiment": "excited",
     "published_at": "2026-10-05T20:10:57.083564+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20261008_171654_77db0e",
+    "topic": "Grammarly AI",
+    "title": "Grammarly AI Deep Dive: Does It Really Cut My Editing Time in Half?",
+    "video_type": "longform",
+    "youtube_video_id": "jDQC3iTYTOQ",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "skeptical",
+    "published_at": "2026-10-08T18:03:54.182028+00:00",
+    "backfilled": false
   }
 ]
