@@ -1307,5 +1307,16 @@
     "verdict_sentiment": "skeptical",
     "published_at": "2026-10-08T18:03:54.182028+00:00",
     "backfilled": false
+  },
+  {
+    "job_id": "longform_20261012_194231_575143",
+    "topic": "Claude AI",
+    "title": "Claude AI Review: The Safe, Fast GPT-4 Rival You\u2019ve Been Overlooking",
+    "video_type": "longform",
+    "youtube_video_id": "iGbvUfUTWTM",
+    "privacy_status": "unlisted",
+    "verdict_sentiment": "excited",
+    "published_at": "2026-10-12T20:18:25.218682+00:00",
+    "backfilled": false
   }
 ]

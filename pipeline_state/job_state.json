@@ -1659,5 +1659,29 @@
     "needs_manual_review": true,
     "review_reason": "low-confidence sources (research=autocomplete, script=groq_openai_gpt-oss-120b) \u2014 published unlisted for manual review.",
     "youtube_video_id": "jDQC3iTYTOQ"
+  },
+  "longform_20261012_194231_575143": {
+    "job_id": "longform_20261012_194231_575143",
+    "video_type": "longform",
+    "topic": "Claude AI",
+    "status": "archived",
+    "completed_steps": [
+      "research",
+      "script",
+      "voiceover",
+      "visuals",
+      "sound_design",
+      "captions",
+      "assembly",
+      "upload"
+    ],
+    "failed_step": null,
+    "error_log": [],
+    "assets": {},
+    "created_at": "2026-10-12T19:42:31.029208+00:00",
+    "last_updated": "2026-10-12T20:18:25.219984+00:00",
+    "needs_manual_review": true,
+    "review_reason": "self-score 4/10 \u2014 The opening is wordy and generic while the final verdict isn\u2019t convincingly earned from the earlier evidence, making the script unlikely to keep viewers engaged. \u2014 published unlisted for manual review.",
+    "youtube_video_id": "iGbvUfUTWTM"
   }
 }
