@@ -1868,6 +1868,11 @@
         "step": "voiceover",
         "error": "string indices must be integers, not 'str'",
         "time": "2026-10-22T14:55:33.193384+00:00"
+      },
+      {
+        "step": "voiceover",
+        "error": "string indices must be integers, not 'str'",
+        "time": "2026-10-26T16:31:54.623155+00:00"
       }
     ],
     "assets": {
@@ -1875,6 +1880,6 @@
       "script_path": "assets/longform_20261019_165115_7fdbb2/script.json"
     },
     "created_at": "2026-10-19T16:51:15.816023+00:00",
-    "last_updated": "2026-10-22T14:55:33.193397+00:00"
+    "last_updated": "2026-10-26T16:31:54.623169+00:00"
   }
 }
