@@ -1931,6 +1931,11 @@
         "step": "visuals",
         "error": "[Errno 2] No such file or directory: 'assets/shorts_20260922_135110_3a2bcb/script.json'",
         "time": "2026-11-21T16:31:08.466833+00:00"
+      },
+      {
+        "step": "visuals",
+        "error": "[Errno 2] No such file or directory: 'assets/shorts_20260922_135110_3a2bcb/script.json'",
+        "time": "2026-11-21T22:45:47.036233+00:00"
       }
     ],
     "assets": {
@@ -1939,7 +1944,7 @@
       "audio_path": "assets/shorts_20260922_135110_3a2bcb/voice.mp3"
     },
     "created_at": "2026-09-22T13:51:10.455147+00:00",
-    "last_updated": "2026-11-21T16:31:08.466847+00:00"
+    "last_updated": "2026-11-21T22:45:47.036248+00:00"
   },
   "longform_20260924_144021_cd6d5f": {
     "job_id": "longform_20260924_144021_cd6d5f",
